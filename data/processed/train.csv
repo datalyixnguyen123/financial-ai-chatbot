@@ -1,0 +1,561 @@
+id,text,intent
+405,Cho giải trí tối đa 700k mỗi tháng,set_budget
+523,Lương về thì nên chia tiền thế nào?,financial_advice
+750,Freelance vừa nhận 4 triệu,add_income
+427,Sáng làm tô mì 30 nghìn,add_expense
+42,Mình vừa mua đồ dùng học tập 250 nghìn,add_expense
+496,Cho ăn uống ngân sách 2 triệu,set_budget
+109,Tôi muốn giới hạn tiền giải trí ở mức 700 nghìn,set_budget
+345,Ăn vặt chiều nay hết 45 nghìn,add_expense
+57,Hôm nay được người ta trả nợ 1 triệu,add_income
+260,Được bố mẹ cho 3 triệu,add_income
+480,7 ngày qua mình tiêu bao nhiêu?,query_expense
+626,Sáng nay ăn xôi hết 25k,add_expense
+228,Mới gọi đồ ăn hết 120k,add_expense
+213,Mục tiêu là có 50 triệu sau 10 tháng,saving_goal
+594,Xăng xe hết bao nhiêu tiền?,query_category
+333,Mua thuốc hết 125k ở nhà thuốc,add_expense
+25,Đổ xăng 70 nghìn rồi,add_expense
+781,Tháng trước tổng chi bao nhiêu?,query_expense
+352,Vừa bán chiếc laptop cũ được 8 triệu,add_income
+357,Vừa thu được khoản nợ 2 triệu,add_income
+52,Vừa nhận lương tháng này 12 củ,add_income
+332,Vừa thanh toán hóa đơn điện 380 nghìn,add_expense
+734,Tiền phòng tháng này 4 triệu,add_expense
+630,Mua cái áo mới 600k,add_expense
+502,Đặt hạn mức mua sắm 2 triệu rưỡi,set_budget
+335,Mua tài liệu học tập hết 180 nghìn,add_expense
+286,Tháng này tiền ăn uống của mình hết bao nhiêu?,query_category
+19,Tuần này mình đã tiêu tổng cộng bao nhiêu?,query_expense
+585,Từ đầu năm tới giờ đã tiêu tổng cộng bao nhiêu?,query_expense
+749,Mẹ gửi 1 triệu rưỡi,add_income
+84,Hôm nay mình đã tiêu bao nhiêu?,query_expense
+62,Được thưởng thêm 500 nghìn,add_income
+463,Lương tháng này 17 triệu nhé,add_income
+292,Chi phí thuốc men tháng này bao nhiêu?,query_category
+448,Được thưởng 3 triệu,add_income
+183,Tuần vừa rồi tôi đã tiêu bao nhiêu?,query_expense
+550,Nhận tiền freelance 3 triệu rưỡi,add_income
+501,Ăn uống không được vượt quá 2 củ,set_budget
+224,Làm thế nào để lập ngân sách cá nhân?,financial_advice
+425,Có cách nào kiểm soát chi tiêu mua sắm không?,financial_advice
+468,Kiểm tra số dư giúp mình,query_balance
+320,Làm thế nào để hạn chế tiêu tiền linh tinh?,financial_advice
+329,Uống cà phê hết 50 nghìn rồi,add_expense
+444,Mua quà hết 280k,add_expense
+494,Xăng xe tháng này hết bao nhiêu?,query_category
+177,Hiện giờ tôi còn bao nhiêu tiền?,query_balance
+677,Từ đầu tháng đến giờ chi hết bao nhiêu?,query_expense
+364,Vừa nhận tiền công 900k,add_income
+164,Nhận tiền dự án 8 triệu,add_income
+249,Khách thanh toán đơn hàng 3 triệu,add_income
+519,Quỹ khẩn cấp là gì vậy?,financial_advice
+711,Muốn dành dụm 10 triệu trong 3 tháng,saving_goal
+75,Tôi còn dư bao nhiêu tiền?,query_balance
+644,Mua quà sinh nhật 350k,add_expense
+406,Mình muốn dành 20 triệu trong 5 tháng,saving_goal
+105,Đặt mức 500 nghìn cho tiền điện,set_budget
+115,Mục tiêu của tôi là dành dụm 30 triệu trong 1 năm,saving_goal
+301,Tôi muốn đặt mức tối đa 2 triệu cho ăn uống,set_budget
+93,Tôi đã tiêu bao nhiêu cho mua sắm?,query_category
+412,Mỗi tháng phải để dành bao nhiêu để đủ 36 triệu sau 6 tháng?,saving_goal
+90,Chi tiêu tuần này của tôi là bao nhiêu?,query_expense
+529,Uống trà sữa mất 45k,add_expense
+735,Mua sách 150k,add_expense
+744,Mua quà hết 350k,add_expense
+576,Tháng này mình tiêu hết bao nhiêu?,query_expense
+498,Đi lại giới hạn 800k nhé,set_budget
+495,Khoản nào đang tốn nhiều nhất?,query_category
+12,Tôi muốn để dành 20 triệu trong 4 tháng,saving_goal
+434,Phòng tháng này 5 triệu,add_expense
+44,Cuối tuần đi chơi tốn 500k,add_expense
+43,Đi Grab hết 75k,add_expense
+168,Bán cái bàn được 700k,add_income
+704,Cho đi lại tối đa 900k một tháng,set_budget
+614,Cần tiết kiệm 60 triệu trong 15 tháng,saving_goal
+413,Tôi muốn có 25 triệu tiền tiết kiệm sau 10 tháng,saving_goal
+179,Số tiền còn lại của mình là bao nhiêu?,query_balance
+531,Tối qua xem phim hết 150k,add_expense
+540,Ăn tối ở ngoài hết 180 nghìn,add_expense
+178,Trong ví còn bao nhiêu?,query_balance
+666,Tài khoản bây giờ còn bao nhiêu tiền?,query_balance
+767,Mình còn bao nhiêu tiền trong ví?,query_balance
+258,Khách vừa trả nợ 2 triệu,add_income
+766,Giờ tài khoản còn bao nhiêu?,query_balance
+544,Mua quà cho mẹ hết 400k,add_expense
+16,Tối qua đi ăn lẩu hết 350k,add_expense
+4,Tháng này tôi tiêu bao nhiêu,query_expense
+336,Đi xe buýt hôm nay hết 10k,add_expense
+257,Công ty chuyển khoản tiền lương rồi,add_income
+581,Tháng trước tiêu bao nhiêu rồi?,query_expense
+446,Lương vừa về 12 triệu,add_income
+339,Vừa thanh toán tiền mạng 280k,add_expense
+479,Tuần này tổng chi hết bao nhiêu?,query_expense
+418,Tôi nên bắt đầu lập ngân sách cá nhân thế nào?,financial_advice
+639,Vừa thanh toán tiền internet 280k,add_expense
+715,Làm sao để dành đủ 12 triệu trong 1 năm?,saving_goal
+325,Nên bắt đầu quản lý tài chính cá nhân từ đâu?,financial_advice
+458,Công ty chuyển phụ cấp 1 triệu,add_income
+10,Tháng này tiền ăn của tôi hết bao nhiêu?,query_category
+250,Mới nhận tiền freelance 2 củ rưỡi,add_income
+23,Có cách nào giúp tôi bớt tiêu tiền không?,financial_advice
+222,Làm sao để tiết kiệm được nhiều tiền hơn?,financial_advice
+548,Công ty thưởng cho mình 4 triệu,add_income
+691,Giải trí tháng này hết bao nhiêu tiền?,query_category
+785,Tuần này mình đã tiêu tổng cộng bao nhiêu?,query_expense
+627,Mua tô phở 50 nghìn,add_expense
+341,Mua đồ gia dụng hết 600k,add_expense
+672,Hiện tại mình còn lại bao nhiêu?,query_balance
+204,Giới hạn giải trí tháng này 800k nhé,set_budget
+238,Mua quần jean 550k,add_expense
+94,Tiền điện tháng này bao nhiêu?,query_category
+532,Vừa đóng hóa đơn nước 200 nghìn,add_expense
+363,Lương tháng này được 16 triệu,add_income
+545,Ăn sáng hết 30 nghìn,add_expense
+285,Tháng này tôi đã tiêu tổng cộng bao nhiêu rồi?,query_expense
+185,Tháng trước tôi tiêu tổng bao nhiêu?,query_expense
+650,Vừa nhận 3 triệu tiền freelance,add_income
+397,Mỗi tháng tiền mua sắm không quá 3 triệu nhé,set_budget
+154,Mới nhận thưởng 3 triệu,add_income
+76,Số tiền trong tài khoản của tôi là bao nhiêu?,query_balance
+454,Vừa được hoàn 200 nghìn,add_income
+696,Ăn uống mỗi tháng tối đa 2 triệu,set_budget
+278,Hôm nay mình đã chi tổng bao nhiêu tiền?,query_expense
+69,Vừa được hoàn tiền 200k,add_income
+515,Làm sao để dành đủ 12 triệu trong 1 năm?,saving_goal
+189,Hôm qua tổng chi là bao nhiêu?,query_expense
+272,Cho mình biết số dư hiện tại nhé,query_balance
+237,Đi GrabBike hết 35 nghìn,add_expense
+89,Cho tôi xem tổng tiền đã chi tháng này,query_expense
+763,Lương vừa ting ting 17 triệu,add_income
+118,Tôi muốn tích được 5 triệu trong 3 tháng,saving_goal
+126,Nay ăn bún 40k,add_expense
+661,Bố mẹ gửi thêm 2 củ,add_income
+290,Tiền thuê phòng tháng này là bao nhiêu?,query_category
+239,Vừa nạp tiền điện thoại 100k,add_expense
+1,Nay ăn phở 50k,add_expense
+792,Tiền thuốc đã tốn bao nhiêu?,query_category
+603,Tiền nhà mỗi tháng giới hạn 6 triệu,set_budget
+795,Khoản nào tôi tiêu nhiều tiền nhất?,query_category
+466,Số dư giờ còn bao nhiêu?,query_balance
+279,Tuần này tổng chi là bao nhiêu?,query_expense
+625,Làm thế nào để duy trì thói quen tiết kiệm?,financial_advice
+117,Mỗi tháng tôi cần để dành bao nhiêu để có 60 triệu sau 1 năm?,saving_goal
+229,Sáng nay đi bus mất 15k,add_expense
+757,Vừa nhận lại khoản nợ 2 triệu,add_income
+421,Nên theo dõi các khoản chi tiêu như thế nào?,financial_advice
+435,Mua sách online 160k,add_expense
+275,Mình đang có bao nhiêu tiền?,query_balance
+319,Quỹ khẩn cấp nên có bao nhiêu tiền?,financial_advice
+552,Bán đồ cũ được 900k,add_income
+145,Mới mua balo 400 nghìn,add_expense
+649,Mẹ gửi tiền cho mình 1 triệu,add_income
+736,Đi Grab hết 70 nghìn,add_expense
+727,Mua cơm trưa 55 nghìn,add_expense
+586,Tháng này ăn uống hết bao nhiêu?,query_category
+370,Mình còn dư bao nhiêu sau các khoản chi?,query_balance
+269,Tài khoản ngân hàng giờ còn bao nhiêu?,query_balance
+568,Số dư hiện tại là bao nhiêu vậy?,query_balance
+308,Cần để dành 60 triệu trong vòng 1 năm,saving_goal
+311,Làm sao để dành được 12 triệu trong 6 tháng?,saving_goal
+452,Bán đồ cũ được 600k,add_income
+47,Mua thuốc cảm 60k rồi,add_expense
+350,Freelance tháng này được 4 triệu,add_income
+372,Cho tôi biết số dư bây giờ,query_balance
+524,Làm sao xây dựng thói quen tiết kiệm?,financial_advice
+262,Có thêm 700k tiền thưởng,add_income
+196,Khoản mua sắm hết bao nhiêu rồi?,query_category
+800,Tôi muốn tiết kiệm 30 triệu trong 6 tháng,saving_goal
+673,Sau các khoản chi thì còn bao nhiêu?,query_balance
+108,Đặt ngân sách thuê nhà 7 triệu,set_budget
+60,Mình vừa nhận tiền bán đồ cũ 700k,add_income
+600,Tiền điện không quá 500k một tháng,set_budget
+440,Ăn lẩu với bạn hết 500 nghìn,add_expense
+101,Đặt ngân sách ăn uống tháng này 2 triệu nhé,set_budget
+478,Hôm nay đã tiêu bao nhiêu?,query_expense
+719,Quỹ khẩn cấp có cần thiết không?,financial_advice
+584,Cho tôi biết tổng chi tháng này,query_expense
+738,Mua giày 800 nghìn,add_expense
+180,Cho biết tôi đang còn bao nhiêu tiền,query_balance
+305,Giới hạn tiền giải trí ở mức 500k,set_budget
+430,Mua cái quần 450k,add_expense
+508,Mục tiêu 50 triệu sau 1 năm,saving_goal
+771,Sau khi chi tiêu mình còn bao nhiêu?,query_balance
+150,Mua quà sinh nhật hết 350k,add_expense
+125,Làm thế nào để kiểm soát chi tiêu?,financial_advice
+635,Mua sách hết 200k,add_expense
+698,Đi lại tháng này giới hạn 800k,set_budget
+186,Trong tháng này đã chi bao nhiêu rồi?,query_expense
+542,Đi taxi mất 130 nghìn,add_expense
+51,Công ty chuyển lương 15 triệu rồi,add_income
+488,Mua sắm hết bao nhiêu tiền?,query_category
+790,Tiền thuê nhà hết bao nhiêu?,query_category
+486,Tiền ăn tháng này hết bao nhiêu?,query_category
+322,Tôi nên phân bổ thu nhập hàng tháng ra sao?,financial_advice
+354,Được hoàn tiền 300 nghìn,add_income
+740,Ăn tối ngoài quán hết 200 nghìn,add_expense
+143,Mua thuốc 2 trăm nghìn,add_expense
+371,Hiện tại ví còn bao nhiêu tiền?,query_balance
+142,Vừa trả hóa đơn mạng 220k,add_expense
+400,Tiền điện tối đa 600 nghìn mỗi tháng,set_budget
+264,Người ta vừa chuyển cho mình 2 củ,add_income
+321,Có phương pháp nào để theo dõi chi tiêu hiệu quả không?,financial_advice
+20,Khoản nào tháng này ngốn tiền nhất?,query_category
+173,Ví còn tiền không?,query_balance
+654,Vừa được hoàn tiền 400 nghìn,add_income
+313,Mục tiêu tiết kiệm 8 triệu trong 4 tháng,saving_goal
+391,Chi cho giải trí tháng này bao nhiêu?,query_category
+746,Lương tháng này vừa về 15 triệu,add_income
+13,Làm sao để quản lý chi tiêu hiệu quả?,financial_advice
+408,Mục tiêu là có 50 triệu trong 1 năm,saving_goal
+409,Muốn để dành 15 triệu trong 3 tháng,saving_goal
+306,Mục tiêu của tôi là tiết kiệm 20 triệu trong 4 tháng,saving_goal
+355,Tiền thưởng vừa về 5 củ,add_income
+26,Sáng nay mua xôi 20k,add_expense
+598,Đi lại giới hạn 700k nhé,set_budget
+170,Mẹ gửi tiền sinh hoạt 1 triệu,add_income
+39,Vừa trả tiền internet 300 nghìn,add_expense
+176,Tài khoản còn lại bao nhiêu vậy?,query_balance
+246,Hôm nay công ty trả lương 13 triệu,add_income
+299,Cho giải trí ngân sách 1 triệu một tháng,set_budget
+669,Trong ví giờ còn bao nhiêu?,query_balance
+417,Có cách nào giúp tiết kiệm tiền nhanh hơn không?,financial_advice
+549,Mẹ vừa gửi 1 triệu,add_income
+273,Tôi còn dư được bao nhiêu trong tài khoản?,query_balance
+612,Mỗi tháng cần để dành bao nhiêu để đủ 30 triệu sau 5 tháng?,saving_goal
+155,Được bố mẹ gửi 2 triệu,add_income
+127,Sáng làm tô phở 55 nghìn,add_expense
+450,Vừa nhận tiền freelance 5 triệu,add_income
+572,Hiện giờ tài khoản còn bao nhiêu?,query_balance
+342,Đi taxi hết 120 nghìn,add_expense
+431,Tối qua đi chơi hết 300 nghìn,add_expense
+288,Mua sắm tháng này tốn bao nhiêu?,query_category
+114,Tôi cần tiết kiệm 20 triệu để mua laptop trong 6 tháng,saving_goal
+500,Tiền điện tối đa 600 nghìn,set_budget
+174,Mình còn dư được bao nhiêu?,query_balance
+360,Nhận tiền dự án 10 triệu rồi,add_income
+483,Hôm qua đã chi bao nhiêu?,query_expense
+58,Vừa nhận 800 nghìn tiền làm thêm,add_income
+553,Tiền làm thêm vừa về 1 triệu 2,add_income
+223,Có nên lập quỹ khẩn cấp không?,financial_advice
+281,Trong 30 ngày qua tôi đã chi bao nhiêu?,query_expense
+18,Ví của mình còn bao nhiêu tiền?,query_balance
+128,Uống trà sữa hết 35k,add_expense
+323,Làm sao để kiểm soát việc mua sắm quá mức?,financial_advice
+256,Vừa được hoàn lại 500k,add_income
+539,Vừa thanh toán wifi 250k,add_expense
+471,Mình còn dư được bao nhiêu?,query_balance
+599,Cho giải trí ngân sách 800 nghìn,set_budget
+469,Trong ví còn bao nhiêu?,query_balance
+769,Kiểm tra xem tài khoản còn bao nhiêu,query_balance
+191,Tiền ăn tháng này bao nhiêu?,query_category
+116,Làm sao để đủ 15 triệu tiền tiết kiệm sau 6 tháng?,saving_goal
+517,Có cách nào tiết kiệm hiệu quả không?,financial_advice
+710,Cần tiết kiệm 80 triệu trong 2 năm,saving_goal
+536,Đi xe ôm công nghệ hết 40 nghìn,add_expense
+95,Tháng này tiền thuê nhà hết bao nhiêu?,query_category
+181,Tháng này tổng cộng mình đã chi bao nhiêu?,query_expense
+302,Đặt budget tiền nhà tháng này là 6 triệu,set_budget
+617,Tôi nên tiết kiệm tiền như thế nào?,financial_advice
+582,Năm nay tổng chi tiêu là bao nhiêu?,query_expense
+591,Giải trí tháng này chi bao nhiêu?,query_category
+732,Vừa đóng tiền điện 500k,add_expense
+559,Bán chiếc đồng hồ được 2 triệu,add_income
+709,Tôi muốn tích lũy 15 triệu trong 5 tháng,saving_goal
+543,Đóng tiền học 3 triệu,add_expense
+6,Sáng nay mua bánh mì 25k,add_expense
+786,Tiền ăn tháng này hết bao nhiêu?,query_category
+46,Đã thanh toán hóa đơn điện nước 800k,add_expense
+726,Nay ăn sáng hết 30k,add_expense
+158,Khách chuyển khoản 1 triệu,add_income
+606,Mình muốn tiết kiệm 15 triệu trong 3 tháng,saving_goal
+172,Số dư hiện tại của tôi là bao nhiêu?,query_balance
+17,Mẹ vừa gửi cho mình 1 triệu,add_income
+512,Mỗi tháng cần tiết kiệm bao nhiêu để đủ 36 triệu sau 6 tháng?,saving_goal
+49,Ăn lẩu hết 450 nghìn,add_expense
+775,Tôi còn bao nhiêu để tiêu?,query_balance
+758,Công ty trả phụ cấp 800 nghìn,add_income
+481,Tháng trước chi tổng cộng bao nhiêu?,query_expense
+284,Cho mình biết tổng số tiền đã chi trong tuần này,query_expense
+537,Đổ xăng hết 90k,add_expense
+226,Chiều nay mua trà sữa 40k,add_expense
+27,Ăn trưa hết 65 nghìn,add_expense
+631,Đi xem phim hết 180 nghìn,add_expense
+438,Mua đôi dép 200 nghìn,add_expense
+365,Có thêm 1 triệu tiền thưởng,add_income
+230,Mua mỹ phẩm hết 450 nghìn,add_expense
+38,Mua vé xe 200k,add_expense
+780,7 ngày qua đã tiêu hết bao nhiêu?,query_expense
+375,Cuối cùng mình còn bao nhiêu?,query_balance
+470,Hiện tại tôi còn bao nhiêu?,query_balance
+772,Tài khoản còn lại bao nhiêu tiền?,query_balance
+683,Hôm qua mình đã tiêu hết bao nhiêu?,query_expense
+695,Khoản nào mình đang tiêu nhiều nhất?,query_category
+195,Đã chi bao nhiêu cho tiền điện nước?,query_category
+685,Tuần này tổng cộng đã tiêu bao nhiêu tiền?,query_expense
+694,Xăng xe tháng này hết bao nhiêu?,query_category
+504,Cho đi lại tối đa 1 triệu mỗi tháng,set_budget
+774,Trong tài khoản còn bao nhiêu vậy?,query_balance
+670,Tôi còn dư bao nhiêu tiền?,query_balance
+773,Cho mình biết số dư nhé,query_balance
+163,Anh mình chuyển 500k,add_income
+752,Bán đồ cũ được 700k,add_income
+153,Công ty chuyển 20 triệu tiền lương,add_income
+558,Công ty trả phụ cấp 800 nghìn,add_income
+573,Mình còn bao nhiêu để chi tiêu?,query_balance
+676,Tháng này đã tiêu tổng cộng bao nhiêu?,query_expense
+112,Cần để dành 10 triệu trong 5 tháng,saving_goal
+227,Vừa ăn cơm văn phòng hết 75 nghìn,add_expense
+793,Học tập tháng này hết bao nhiêu?,query_category
+104,Tôi muốn ngân sách đi lại tháng này là 800k,set_budget
+422,Có nguyên tắc nào để quản lý tiền hiệu quả không?,financial_advice
+420,Làm sao để không tiêu tiền quá tay?,financial_advice
+120,Mình đặt mục tiêu tiết kiệm 25 triệu trong 10 tháng,saving_goal
+54,Mẹ gửi cho 500k,add_income
+152,Vừa lãnh lương 10 củ,add_income
+404,Tôi muốn giới hạn chi tiêu đi lại ở mức 1 triệu,set_budget
+754,Vừa được hoàn 300 nghìn,add_income
+208,Đặt budget mua sắm tháng này 2 củ,set_budget
+678,Hôm nay tổng chi tiêu là bao nhiêu?,query_expense
+619,Quỹ khẩn cấp cần thiết thế nào?,financial_advice
+9,Từ đầu tháng tới giờ tiêu hết bao nhiêu rồi?,query_expense
+652,Bán đồ cũ thu được 750k,add_income
+37,Đổ đầy bình xăng hết 60k,add_expense
+453,Tiền làm thêm vừa nhận 1 triệu,add_income
+254,Anh trai gửi mình 300 nghìn,add_income
+304,Ngân sách đi lại mỗi tháng để 1 triệu,set_budget
+607,Cần để dành 20 triệu trong 6 tháng,saving_goal
+580,Trong 7 ngày qua đã chi bao nhiêu tiền?,query_expense
+588,Mình đã mua sắm hết bao nhiêu?,query_category
+263,Tiền công tháng này được 4 triệu,add_income
+298,Giới hạn chi tiêu đi lại tháng này là 700k,set_budget
+415,Làm sao để tiết kiệm đủ 12 triệu trong 1 năm?,saving_goal
+151,Lương tháng này về 14 triệu,add_income
+637,Đổ xăng 85k,add_expense
+713,Tôi muốn có 40 triệu tiết kiệm sau 10 tháng,saving_goal
+551,Khách chuyển khoản 5 triệu,add_income
+489,Tiền điện tháng này bao nhiêu?,query_category
+148,Tối nay nhậu hết 500 nghìn,add_expense
+147,Mua vé tàu hết 300k,add_expense
+589,Tiền điện tháng này hết bao nhiêu?,query_category
+743,Đóng học phí 2 triệu,add_expense
+602,Đặt hạn mức mua sắm 3 củ,set_budget
+349,Mẹ gửi thêm 1 triệu,add_income
+464,Vừa nhận công 700k,add_income
+326,Trưa nay ăn bún bò 65k,add_expense
+187,7 ngày qua mình tiêu hết bao nhiêu?,query_expense
+124,Tôi nên chia thu nhập hàng tháng như thế nào?,financial_advice
+684,Tổng tiền đã chi trong tháng này là bao nhiêu?,query_expense
+144,Ăn uống hôm nay hết 90k,add_expense
+764,Vừa nhận tiền công 900k,add_income
+198,Tiền thuê nhà tháng này hết bao nhiêu?,query_category
+280,Tháng trước mình đã tiêu hết bao nhiêu?,query_expense
+294,Tôi tiêu bao nhiêu tiền cho việc đi lại?,query_category
+401,Đừng để chi ăn uống vượt quá 2 củ,set_budget
+123,Quỹ khẩn cấp là gì?,financial_advice
+184,Hôm nay tổng chi của mình là bao nhiêu?,query_expense
+203,Cho tôi ngân sách mua sắm 4 triệu,set_budget
+439,Vừa trả tiền mạng 300k,add_expense
+247,Vừa nhận 2 củ tiền thưởng,add_income
+416,Làm sao để quản lý chi tiêu hàng tháng cho hợp lý?,financial_advice
+712,Mỗi tháng phải tiết kiệm bao nhiêu để đủ 24 triệu sau 6 tháng?,saving_goal
+130,Đi xe ôm hết 50 nghìn,add_expense
+403,Tiền thuê nhà giới hạn 6 triệu nhé,set_budget
+633,Mua thuốc ở hiệu thuốc 100 nghìn,add_expense
+624,Nên xây dựng kế hoạch tài chính cá nhân ra sao?,financial_advice
+728,Vừa đặt trà sữa 40k,add_expense
+220,Làm sao để dành được 20 triệu trong 8 tháng?,saving_goal
+730,Đi xe ôm hết 45k,add_expense
+610,Mình cần tích lũy 100 triệu trong 2 năm,saving_goal
+733,Mua thuốc hết 120 nghìn,add_expense
+618,Có nên lập ngân sách hàng tháng không?,financial_advice
+387,Tôi tiêu bao nhiêu cho xăng xe trong tháng này?,query_category
+776,Tháng này tổng chi bao nhiêu rồi?,query_expense
+510,Tôi muốn tích 80 triệu trong 2 năm,saving_goal
+268,Kiểm tra giúp số dư hiện tại,query_balance
+782,Từ đầu năm đến giờ đã tiêu bao nhiêu?,query_expense
+442,Đi taxi mất 100 nghìn,add_expense
+497,Mua sắm tháng này tối đa 3 triệu,set_budget
+113,Mình muốn có 100 triệu sau 2 năm,saving_goal
+233,Mua thuốc cho mẹ hết 320 nghìn,add_expense
+699,Giải trí mỗi tháng không quá 1 triệu,set_budget
+608,Tôi muốn có 40 triệu sau 8 tháng,saving_goal
+374,Tiền trong tài khoản giờ còn bao nhiêu?,query_balance
+234,Đóng tiền phòng 4 triệu rồi,add_expense
+634,Tiền thuê nhà tháng này 5 triệu,add_expense
+318,Tôi nên lập ngân sách cá nhân như thế nào?,financial_advice
+411,Cần dành dụm 10 triệu trong vòng 4 tháng,saving_goal
+718,Nên lập ngân sách cá nhân thế nào cho hợp lý?,financial_advice
+359,Bán vài món đồ cũ được 500 nghìn,add_income
+259,Bán đồ cũ thu về 800 nghìn,add_income
+628,Trưa gọi cơm hết 65k,add_expense
+283,Hôm qua tôi đã tiêu tổng cộng bao nhiêu?,query_expense
+377,Tháng này tổng tiền tiêu là bao nhiêu?,query_expense
+385,Từ đầu năm đến giờ tổng tiền đã tiêu là bao nhiêu?,query_expense
+225,Cách kiểm soát việc mua sắm quá tay là gì?,financial_advice
+760,Nhận tiền dự án 10 củ,add_income
+658,Công ty chuyển phụ cấp 1 triệu,add_income
+473,Sau các khoản chi còn bao nhiêu tiền?,query_balance
+348,Vừa nhận thưởng 2 triệu rưỡi,add_income
+506,Mình muốn để dành 20 triệu trong 5 tháng,saving_goal
+640,Tối qua ăn ngoài hết 250 nghìn,add_expense
+789,Tiền điện tháng này bao nhiêu?,query_category
+741,Đi siêu thị hết 500k,add_expense
+723,Làm sao để kiểm soát việc mua sắm quá tay?,financial_advice
+620,Làm sao để giảm các khoản chi không cần thiết?,financial_advice
+686,Tiền ăn tháng này hết bao nhiêu vậy?,query_category
+646,Lương vừa vào tài khoản 13 triệu,add_income
+679,Tuần này mình tiêu bao nhiêu rồi?,query_expense
+557,Vừa thu hồi khoản nợ 1 triệu rưỡi,add_income
+578,Hôm nay tổng chi là bao nhiêu?,query_expense
+86,Trong 7 ngày qua tôi chi bao nhiêu?,query_expense
+243,Hôm qua đi ăn hết gần 300k,add_expense
+160,Được hoàn tiền 150 nghìn,add_income
+525,Làm sao kiểm soát việc mua sắm?,financial_advice
+36,Ăn sáng 30 nghìn,add_expense
+541,Đi siêu thị hết 700k,add_expense
+171,Giờ tài khoản còn bao nhiêu?,query_balance
+655,Thưởng tháng này được 3 triệu,add_income
+688,Mình đã tiêu bao nhiêu cho mua sắm?,query_category
+680,7 ngày vừa qua đã chi bao nhiêu?,query_expense
+753,Nhận tiền làm thêm 2 triệu,add_income
+96,Tôi đã chi bao nhiêu cho giải trí?,query_category
+564,Vừa nhận tiền công 1 triệu,add_income
+241,Mới trả tiền wifi 250k,add_expense
+575,Còn bao nhiêu tiền sau khi trừ chi tiêu?,query_balance
+461,Bố mẹ gửi tiền 1 triệu rưỡi,add_income
+554,Vừa được hoàn tiền 250 nghìn,add_income
+705,Giải trí chỉ được tiêu 500 nghìn,set_budget
+207,Tôi muốn giới hạn đi lại ở mức 1 triệu,set_budget
+393,Tháng này học hành hết bao nhiêu tiền?,query_category
+398,Đặt giới hạn đi lại là 800k một tháng,set_budget
+681,Tháng trước tổng chi là bao nhiêu?,query_expense
+218,Cần để dành 5 triệu trong 3 tháng,saving_goal
+5,Tôi muốn tiết kiệm 30 triệu trong 6 tháng,saving_goal
+643,Đóng học phí hết 3 triệu,add_expense
+717,Làm sao để tiết kiệm được nhiều hơn?,financial_advice
+613,Tôi muốn có 18 triệu tiết kiệm sau 6 tháng,saving_goal
+547,Vừa nhận 10 củ tiền lương,add_income
+99,Tháng này tôi tiêu bao nhiêu cho giáo dục?,query_category
+574,Cho biết số dư hiện tại của mình,query_balance
+407,Tôi cần tiết kiệm 30 triệu sau 6 tháng,saving_goal
+503,Tiền nhà tháng này giới hạn 6 triệu,set_budget
+48,Vừa mua tai nghe hết 1 triệu,add_expense
+33,Tháng này vừa đóng tiền nhà 5 triệu,add_expense
+201,Đặt hạn mức ăn uống 2 triệu tháng này,set_budget
+135,Mua vở với bút hết 150k,add_expense
+28,Mới cafe 45k,add_expense
+707,Mình cần để dành 30 triệu trong 6 tháng,saving_goal
+231,Tối qua đi karaoke hết 600k,add_expense
+490,Tiền nhà đã tốn bao nhiêu?,query_category
+379,Tuần này mình chi tổng cộng bao nhiêu?,query_expense
+289,Tiền điện tháng này hết bao nhiêu?,query_category
+419,Quỹ khẩn cấp dùng để làm gì?,financial_advice
+675,Số tiền còn trong tài khoản là bao nhiêu?,query_balance
+392,Tiền thuốc men đã tốn bao nhiêu?,query_category
+593,Tháng này học hành hết bao nhiêu?,query_category
+499,Giải trí mỗi tháng 1 triệu thôi,set_budget
+139,Mua đồ Shopee 250k,add_expense
+63,Anh trai gửi mình 2 củ,add_income
+472,Giờ tài khoản còn bao nhiêu vậy?,query_balance
+648,Được thưởng 2 triệu,add_income
+129,Mới mua quần áo 600k,add_expense
+779,Tuần này tổng cộng tiêu bao nhiêu?,query_expense
+521,Nên theo dõi chi tiêu ra sao?,financial_advice
+65,Có người chuyển cho mình 300k,add_income
+15,Mới mua đôi giày hết 800k,add_expense
+157,Vừa nhận tiền công 800k,add_income
+41,Trưa nay ăn cơm hết 40k,add_expense
+493,Học hành hết bao nhiêu tiền?,query_category
+380,Trong 7 ngày vừa rồi đã tiêu bao nhiêu?,query_expense
+188,Từ đầu năm tới giờ đã tiêu bao nhiêu?,query_expense
+217,Mình muốn có 10 triệu tiền tiết kiệm sau 4 tháng,saving_goal
+53,Mình được thưởng 2 triệu,add_income
+338,Mua giày hết 1 triệu 1,add_expense
+296,Đặt ngân sách ăn uống 2 triệu mỗi tháng cho tôi,set_budget
+702,Mua sắm tối đa 2 củ mỗi tháng,set_budget
+252,Vừa bán chiếc máy ảnh được 7 triệu,add_income
+462,Khách thanh toán 2 củ,add_income
+456,Anh mình gửi 500k,add_income
+798,Giới hạn đi lại 800k một tháng,set_budget
+270,Còn bao nhiêu tiền trong ví vậy?,query_balance
+202,Tiền xăng mỗi tháng tối đa 1 triệu,set_budget
+162,Vừa được thưởng 1 triệu rưỡi,add_income
+556,Anh trai gửi 600k,add_income
+402,Đặt hạn mức mua sắm tháng này 2 triệu rưỡi,set_budget
+703,Tiền nhà giới hạn 7 triệu nhé,set_budget
+477,Từ đầu tháng tới giờ chi bao nhiêu rồi?,query_expense
+106,Tháng này không được tiêu quá 2 triệu tiền ăn,set_budget
+566,Tài khoản hiện còn bao nhiêu?,query_balance
+390,Tôi đã trả bao nhiêu tiền nhà?,query_category
+2,Công ty vừa chuyển lương 10 triệu,add_income
+768,Số dư hiện tại của tôi bao nhiêu?,query_balance
+562,Khách vừa thanh toán 7 triệu,add_income
+81,Tháng này tổng chi bao nhiêu rồi?,query_expense
+206,Ngân sách tiền điện đặt 600 nghìn,set_budget
+35,Hôm qua shopping hết 700k,add_expense
+509,Muốn dành dụm 15 triệu trong 4 tháng,saving_goal
+428,Vừa đặt đồ ăn 85k,add_expense
+455,Thưởng tháng này 2 triệu rưỡi,add_income
+367,Kiểm tra xem mình còn bao nhiêu tiền,query_balance
+92,Tháng này tôi tốn bao nhiêu tiền đi lại?,query_category
+340,Tối qua ăn nhà hàng hết 450 nghìn,add_expense
+565,Được thưởng thêm 700k,add_income
+346,Lương vừa về tài khoản 14 triệu,add_income
+242,Mua quyển sách này 180 nghìn,add_expense
+14,Hôm nay Hà Nội có mưa không?,unknown
+316,Có cách nào giúp tôi quản lý chi tiêu tốt hơn không?,financial_advice
+601,Ăn uống tháng này chỉ được 2 triệu thôi,set_budget
+388,Khoản mua sắm tháng này hết bao nhiêu?,query_category
+274,Giờ trong tài khoản còn lại bao nhiêu?,query_balance
+167,Vừa thu được khoản nợ 3 triệu,add_income
+794,Xăng xe đã chi bao nhiêu?,query_category
+647,Công ty chuyển lương 16 củ,add_income
+485,Cho tôi biết tổng chi tuần này,query_expense
+783,Hôm qua tổng chi là bao nhiêu?,query_expense
+505,Giải trí chỉ được tiêu 500k thôi,set_budget
+244,Mua vé concert hết 1 triệu 2,add_expense
+567,Giờ mình còn bao nhiêu tiền?,query_balance
+563,Lương vừa ting ting 16 triệu,add_income
+687,Tháng này tiền đi lại bao nhiêu?,query_category
+190,Cho tôi biết tổng tiền đã tiêu tuần này,query_expense
+700,Đặt hạn mức tiền điện 600 nghìn,set_budget
+476,Tháng này tiêu tổng bao nhiêu?,query_expense
+682,Từ đầu năm đến giờ tiêu bao nhiêu?,query_expense
+511,Cần để dành 10 triệu trong 3 tháng,saving_goal
+59,Khách mới chuyển mình 5 triệu,add_income
+475,Tôi đang có bao nhiêu tiền?,query_balance
+561,Bố gửi cho 3 củ,add_income
+748,Vừa nhận thưởng 3 triệu,add_income
+253,Tiền lương vừa ting ting 15 triệu,add_income
+22,Mỗi tháng cần tiết kiệm bao nhiêu để đủ 60 triệu sau 1 năm?,saving_goal
+314,Tôi muốn dành dụm 50 triệu trong 18 tháng,saving_goal
+460,Vừa nhận tiền dự án 8 triệu,add_income
+161,Tháng này nhận lương 16 củ,add_income
+277,Từ đầu tháng đến nay đã tiêu tổng cộng bao nhiêu?,query_expense
+192,Tháng này đi lại hết bao nhiêu tiền?,query_category
+386,Tiền ăn uống tháng này của tôi bao nhiêu?,query_category
+414,Mục tiêu tiết kiệm của tôi là 60 triệu trong 18 tháng,saving_goal
+492,Tiền thuốc tháng này là bao nhiêu?,query_category
+344,Mua quà cho bạn hết 250k,add_expense
+770,Hiện giờ tôi còn dư bao nhiêu?,query_balance
+309,Mình muốn tích lũy 15 triệu trong 5 tháng,saving_goal
+662,Khách vừa thanh toán 6 triệu,add_income
+131,Mua vé xem phim 120k,add_expense
+664,Vừa nhận tiền công 800k,add_income
+100,Khoản chi nào đang lớn nhất tháng này?,query_category
+373,Tôi còn lại bao nhiêu tiền?,query_balance
+88,Hôm qua mình tiêu hết bao nhiêu?,query_expense
+459,Bán chiếc điện thoại được 4 củ,add_income
+331,Đi xem phim với bạn hết 220k,add_expense
+215,Tôi muốn dành dụm 15 triệu trong 5 tháng,saving_goal
+467,Tài khoản mình còn bao nhiêu tiền?,query_balance
+122,Có cách nào tiết kiệm tiền hiệu quả không?,financial_advice
+615,Làm sao để dành được 24 triệu trong 1 năm?,saving_goal
+21,Ngân sách mua sắm tháng này đặt 3 triệu nhé,set_budget
+701,Ăn uống đừng vượt quá 1 triệu rưỡi,set_budget
+72,Cho mình biết số dư hiện tại với,query_balance
+107,Cho tôi giới hạn mua sắm 5 củ mỗi tháng,set_budget
+271,Sau khi trừ các khoản thì mình còn bao nhiêu?,query_balance
+436,Đi Grab hết 60 nghìn,add_expense
+103,Giới hạn chi tiêu giải trí là 1 triệu nhé,set_budget
