@@ -1,0 +1,122 @@
+[
+  {
+    "id": "budget_rule_001",
+    "file": "50_30_20.md",
+    "topic": "50_30_20",
+    "title": "Learning about budgets",
+    "organization": "Consumer Financial Protection Bureau",
+    "source_url": "https://www.consumerfinance.gov/consumer-tools/educator-tools/youth-financial-education/teach/activities/learning-about-budgets/",
+    "source_year": 2022,
+    "source_type": "official",
+    "language": "en",
+    "chunk_id": "budget_rule_001_chunk_001",
+    "text": "# 50/30/20 Budget Rule\n\n## Overview\n\nQuy tắc 50/30/20 là một framework lập ngân sách phân chia thu nhập thành ba nhóm chính.\n\n## Needs\n\nKhoảng 50% thu nhập có thể được dùng cho các nhu cầu thiết yếu như nhà ở, thực phẩm, tiện ích và giao thông.\n\n## Wants\n\nKhoảng 30% có thể được dành cho các khoản mong muốn như ăn ngoài, giải trí hoặc kỳ nghỉ.\n\n## Savings goals\n\nKhoảng 20% có thể được dành cho mục tiêu tiết kiệm.\n\n## Important note"
+  },
+  {
+    "id": "budget_rule_001",
+    "file": "50_30_20.md",
+    "topic": "50_30_20",
+    "title": "Learning about budgets",
+    "organization": "Consumer Financial Protection Bureau",
+    "source_url": "https://www.consumerfinance.gov/consumer-tools/educator-tools/youth-financial-education/teach/activities/learning-about-budgets/",
+    "source_year": 2022,
+    "source_type": "official",
+    "language": "en",
+    "chunk_id": "budget_rule_001_chunk_002",
+    "text": "50/30/20 là một quy tắc tham khảo, không phải một tỷ lệ bắt buộc áp dụng cho mọi người. Khả năng áp dụng phụ thuộc vào hoàn cảnh tài chính của từng người.\n\n## Source\n\nOrganization: Consumer Financial Protection Bureau\nTitle: Analyzing budgets\nSource URL: https://www.consumerfinance.gov/consumer-tools/educator-tools/youth-financial-education/teach/activities/analyzing-budgets/"
+  },
+  {
+    "id": "budgeting_001",
+    "file": "budgeting.md",
+    "topic": "budgeting",
+    "title": "Making a Budget",
+    "organization": "Consumer.gov",
+    "source_url": "https://consumer.gov/your-money/making-budget",
+    "source_year": 2024,
+    "language": "en",
+    "chunk_id": "budgeting_001_chunk_001",
+    "text": "-- Nội dung trên là bản diễn giải phục vụ Knowledge Base, không phải bản sao của nguồn.\n\n# Budgeting\n\n## Overview\n\nNgân sách cá nhân là kế hoạch giúp theo dõi tiền kiếm được và cách tiền được sử dụng trong một khoảng thời gian, thường là theo tháng.\n\n## Why budgeting matters\n\nNgân sách giúp người dùng nhìn rõ thu nhập và chi tiêu, phát hiện trường hợp chi tiêu vượt thu nhập và xác định những khoản có thể điều chỉnh.\n\n## Basic budgeting process"
+  },
+  {
+    "id": "budgeting_001",
+    "file": "budgeting.md",
+    "topic": "budgeting",
+    "title": "Making a Budget",
+    "organization": "Consumer.gov",
+    "source_url": "https://consumer.gov/your-money/making-budget",
+    "source_year": 2024,
+    "language": "en",
+    "chunk_id": "budgeting_001_chunk_002",
+    "text": "1. Liệt kê các khoản thu nhập.\n2. Liệt kê các hóa đơn và chi phí.\n3. Tổng hợp thu nhập và chi phí.\n4. So sánh số tiền còn lại.\n5. Theo dõi chi tiêu thực tế.\n6. Điều chỉnh ngân sách cho kỳ tiếp theo.\n\n## Important note\n\nNgân sách cần được xem xét lại khi thu nhập hoặc chi phí thay đổi.\n\n## Source\n\nOrganization: Consumer.gov\nTitle: Making a Budget\nSource URL: https://consumer.gov/your-money/making-budget"
+  },
+  {
+    "id": "debt_001",
+    "file": "debt_management.md",
+    "topic": "debt_management",
+    "title": "How to reduce your debt",
+    "organization": "Consumer Financial Protection Bureau",
+    "source_url": "https://www.consumerfinance.gov/archive/blog/how-reduce-your-debt/",
+    "source_year": 2019,
+    "language": "en",
+    "chunk_id": "debt_001_chunk_001",
+    "text": "# Debt Management\n\n## Overview\n\nQuản lý nợ bắt đầu bằng việc biết mình đang nợ bao nhiêu và xây dựng kế hoạch trả nợ.\n\n## Highest interest rate method\n\nPhương pháp lãi suất cao ưu tiên khoản nợ có lãi suất cao nhất trước, trong khi vẫn duy trì các khoản thanh toán tối thiểu cần thiết đối với các khoản nợ khác.\n\n## Snowball method\n\nPhương pháp snowball ưu tiên khoản nợ có số dư nhỏ nhất. Sau khi khoản nợ nhỏ nhất được thanh toán, nguồn tiền bổ sung có thể được chuyển sang khoản nợ tiếp theo."
+  },
+  {
+    "id": "debt_001",
+    "file": "debt_management.md",
+    "topic": "debt_management",
+    "title": "How to reduce your debt",
+    "organization": "Consumer Financial Protection Bureau",
+    "source_url": "https://www.consumerfinance.gov/archive/blog/how-reduce-your-debt/",
+    "source_year": 2019,
+    "language": "en",
+    "chunk_id": "debt_001_chunk_002",
+    "text": "## Choosing a strategy\n\nHai phương pháp có cách ưu tiên khác nhau. Người dùng nên xem xét hoàn cảnh và khả năng của mình khi lựa chọn cách quản lý nợ.\n\n## Source\n\nOrganization: Consumer Financial Protection Bureau\nTitle: How to reduce your debt\nSource URL: https://www.consumerfinance.gov/archive/blog/how-reduce-your-debt/"
+  },
+  {
+    "id": "emergency_fund_001",
+    "file": "emergency_fund.md",
+    "topic": "emergency_fund",
+    "title": "An essential guide to building an emergency fund",
+    "organization": "Consumer Financial Protection Bureau",
+    "source_url": "https://www.consumerfinance.gov/an-essential-guide-to-building-an-emergency-fund/",
+    "language": "en",
+    "chunk_id": "emergency_fund_001_chunk_001",
+    "text": "# Emergency Fund\n\n## Overview\n\nQuỹ khẩn cấp là khoản tiền được dành riêng cho các chi phí bất ngờ hoặc tình huống tài chính khẩn cấp.\n\n## Examples\n\nCác trường hợp có thể cần quỹ khẩn cấp gồm chi phí sửa chữa, hóa đơn y tế bất ngờ hoặc mất thu nhập.\n\n## How much is needed\n\nKhông có một mức tiền cố định phù hợp với tất cả mọi người. Mục tiêu nên phụ thuộc vào hoàn cảnh, thu nhập và các loại chi phí bất ngờ mà một người có thể gặp.\n\n## Building the fund"
+  },
+  {
+    "id": "emergency_fund_001",
+    "file": "emergency_fund.md",
+    "topic": "emergency_fund",
+    "title": "An essential guide to building an emergency fund",
+    "organization": "Consumer Financial Protection Bureau",
+    "source_url": "https://www.consumerfinance.gov/an-essential-guide-to-building-an-emergency-fund/",
+    "language": "en",
+    "chunk_id": "emergency_fund_001_chunk_002",
+    "text": "Có thể bắt đầu bằng những khoản nhỏ và duy trì việc đóng góp đều đặn. Đặt mục tiêu cụ thể và theo dõi tiến độ có thể giúp duy trì thói quen tiết kiệm.\n\n## Important note\n\nQuỹ khẩn cấp dành cho các khoản chi không dự kiến, không phải các chi phí sinh hoạt thông thường.\n\n## Source\n\nOrganization: Consumer Financial Protection Bureau\nTitle: An essential guide to building an emergency fund\nSource URL: https://www.consumerfinance.gov/an-essential-guide-to-building-an-emergency-fund/"
+  },
+  {
+    "id": "saving_001",
+    "file": "saving.md",
+    "topic": "saving",
+    "title": "Evidence-based strategies to build emergency savings",
+    "organization": "Consumer Financial Protection Bureau",
+    "source_url": "https://www.consumerfinance.gov/data-research/research-reports/evidence-based-strategies-build-emergency-savings/",
+    "source_year": 2020,
+    "language": "en",
+    "chunk_id": "saving_001_chunk_001",
+    "text": "# Saving\n\n## Overview\n\nTiết kiệm là việc dành một phần tiền cho các mục tiêu trong tương lai hoặc cho những tình huống cần tiền ngoài dự kiến.\n\n## Setting a goal\n\nMột mục tiêu tiết kiệm cụ thể có thể giúp người dùng xác định số tiền cần tích lũy và theo dõi tiến độ.\n\n## Building a saving habit\n\nDuy trì các khoản đóng góp đều đặn có thể giúp hình thành thói quen tiết kiệm. Việc tự động chuyển tiền định kỳ cũng là một cách có thể hỗ trợ việc duy trì tiết kiệm.\n\n## Monitoring progress"
+  },
+  {
+    "id": "saving_001",
+    "file": "saving.md",
+    "topic": "saving",
+    "title": "Evidence-based strategies to build emergency savings",
+    "organization": "Consumer Financial Protection Bureau",
+    "source_url": "https://www.consumerfinance.gov/data-research/research-reports/evidence-based-strategies-build-emergency-savings/",
+    "source_year": 2020,
+    "language": "en",
+    "chunk_id": "saving_001_chunk_002",
+    "text": "Theo dõi số tiền đã tiết kiệm và mức độ tiến gần đến mục tiêu giúp người dùng đánh giá tiến độ và điều chỉnh kế hoạch khi cần.\n\n## Important note\n\nKhả năng tiết kiệm phụ thuộc vào hoàn cảnh tài chính của từng người.\n\n## Source\n\nOrganization: Consumer Financial Protection Bureau\nTitle: An essential guide to building an emergency fund\nSource URL: https://www.consumerfinance.gov/an-essential-guide-to-building-an-emergency-fund/"
+  }
+]
