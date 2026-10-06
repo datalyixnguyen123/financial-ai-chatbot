@@ -1,0 +1,11 @@
+{
+  "experiment_id": "M7.1.1",
+  "objective": "Evaluate baseline intent classifier on long user queries",
+  "evaluation_only": true,
+  "num_samples": 16,
+  "accuracy": 0.9375,
+  "macro_precision": 0.9583333333333333,
+  "macro_recall": 0.9375,
+  "macro_f1": 0.9333333333333333,
+  "errors": 1
+}

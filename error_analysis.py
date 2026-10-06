@@ -29,7 +29,6 @@ vectorizer = TfidfVectorizer(
     ngram_range=(1, 2),
     max_features=10000
 )
-
 X_train_tfidf = vectorizer.fit_transform(X_train)
 X_validation_tfidf = vectorizer.transform(X_validation)
 
@@ -42,7 +41,6 @@ model = LogisticRegression(
     max_iter=1000,
     random_state=42
 )
-
 model.fit(X_train_tfidf, y_train)
 
 
@@ -59,11 +57,9 @@ y_pred = model.predict(X_validation_tfidf)
 
 result_df = validation_df.copy()
 result_df["predicted_intent"] = y_pred
-
 errors = result_df[
     result_df["intent"] != result_df["predicted_intent"]
 ]
-
 print("\n===== MISCLASSIFIED SAMPLES =====")
 print(f"Number of errors: {len(errors)}")
 
@@ -79,13 +75,11 @@ if len(errors) > 0:
 # =========================
 
 labels = sorted(y_validation.unique())
-
 cm = confusion_matrix(
     y_validation,
     y_pred,
     labels=labels
 )
-
 print("\n===== CONFUSION MATRIX =====")
 print("Labels:")
 print(labels)

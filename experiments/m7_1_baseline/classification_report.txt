@@ -1,0 +1,37 @@
+M7.1 — TF-IDF + Logistic Regression
+======================================================================
+
+VALIDATION
+======================================================================
+                  precision    recall  f1-score   support
+
+     add_expense     0.9615    0.9615    0.9615        26
+      add_income     0.8889    1.0000    0.9412        24
+financial_advice     1.0000    1.0000    1.0000         9
+   query_balance     1.0000    1.0000    1.0000        11
+  query_category     0.9167    1.0000    0.9565        11
+   query_expense     1.0000    1.0000    1.0000        12
+     saving_goal     1.0000    1.0000    1.0000        10
+      set_budget     1.0000    0.6667    0.8000        12
+
+        accuracy                         0.9565       115
+       macro avg     0.9709    0.9535    0.9574       115
+    weighted avg     0.9601    0.9565    0.9540       115
+
+
+TEST
+======================================================================
+                  precision    recall  f1-score   support
+
+     add_expense     1.0000    0.9615    0.9804        26
+      add_income     0.9600    1.0000    0.9796        24
+financial_advice     1.0000    1.0000    1.0000         9
+   query_balance     1.0000    0.9167    0.9565        12
+  query_category     1.0000    1.0000    1.0000        11
+   query_expense     0.9231    1.0000    0.9600        12
+     saving_goal     1.0000    1.0000    1.0000        11
+      set_budget     1.0000    1.0000    1.0000        11
+
+        accuracy                         0.9828       116
+       macro avg     0.9854    0.9848    0.9846       116
+    weighted avg     0.9838    0.9828    0.9827       116

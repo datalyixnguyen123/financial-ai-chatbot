@@ -3,10 +3,10 @@ import os
 import requests
 from app.services.normalization_service import normalize_ner_entities
 
-INFERENCE_API_URL = os.getenv(
-    "INFERENCE_API_URL",
-    ""
-)
+from dotenv import load_dotenv
+load_dotenv()
+
+INFERENCE_API_URL = os.getenv("INFERENCE_API_URL", "")
 
 ENTITY_FIELDS = [
     "amount",
@@ -32,8 +32,7 @@ NER_TO_ENTITY_FIELD = {
 }
 
 def _build_entities(message: str, result: dict) -> dict:
-    entities = {
-        field: None
+    entities = {field: None
         for field in ENTITY_FIELDS
     }
     entities["description"] = message
@@ -54,45 +53,31 @@ def _build_entities(message: str, result: dict) -> dict:
             entities[field] = entity_text
     return entities
 
-
 def analyze_message(message: str) -> dict:
     if not INFERENCE_API_URL:
-        raise RuntimeError(
-            "INFERENCE_API_URL is not configured"
-        )
+        raise RuntimeError("INFERENCE_API_URL is not configured")
     response = requests.post(
         f"{INFERENCE_API_URL}/predict",
         json={
             "text": message
         },
-        timeout=30,
+        timeout = 30,
     )
     response.raise_for_status()
     result = response.json()
     raw_entities = result.get("entities", [])
-    normalized_entities = normalize_ner_entities(
-    raw_entities,
-    description=message,
-    )
+    normalized_entities = normalize_ner_entities(raw_entities, description = message,)
 
     return {
-    "intent": result.get(
-        "intent",
-        "unknown"
-    ),
-    "confidence": result.get(
-        "confidence",
-        0.0
-    ),
+    "intent": result.get("intent", "unknown"),
+    "confidence": result.get("confidence", 0.0),
     "entities": normalized_entities,
     "raw_entities": raw_entities,
 }
 
 def extract_entities(message: str) -> list:
     if not INFERENCE_API_URL:
-        raise RuntimeError(
-            "INFERENCE_API_URL is not configured"
-        )
+        raise RuntimeError("INFERENCE_API_URL is not configured")
     response = requests.post(
         f"{INFERENCE_API_URL}/predict",
         json={
@@ -104,17 +89,12 @@ def extract_entities(message: str) -> list:
     result = response.json()
     entities = result.get("entities", [])
     if not isinstance(entities, list):
-        raise ValueError(
-            "Invalid entity response from inference API"
-        )
+        raise ValueError("Invalid entity response from inference API")
     return entities
 
 def extract_and_normalize_entities(message: str) -> dict:
     raw_entities = extract_entities(message)
-    return normalize_ner_entities(
-        raw_entities,
-        description=message,
-    )
+    return normalize_ner_entities(raw_entities, description = message,)
 
 
 

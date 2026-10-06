@@ -68,7 +68,6 @@ def test_empty_history():
     context = build_conversation_context([])
     assert context == ""
 
-
 def test_invalid_role():
     history = []
     try:

@@ -1,0 +1,9 @@
+,add_expense,add_income,financial_advice,query_balance,query_category,query_expense,saving_goal,set_budget
+add_expense,25,1,0,0,0,0,0,0
+add_income,0,24,0,0,0,0,0,0
+financial_advice,0,0,9,0,0,0,0,0
+query_balance,0,0,0,11,0,1,0,0
+query_category,0,0,0,0,11,0,0,0
+query_expense,0,0,0,0,0,12,0,0
+saving_goal,0,0,0,0,0,0,11,0
+set_budget,0,0,0,0,0,0,0,11

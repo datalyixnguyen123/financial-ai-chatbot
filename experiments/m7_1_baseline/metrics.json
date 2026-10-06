@@ -1,0 +1,68 @@
+{
+  "experiment_id": "M7.1",
+  "objective": "Intent classification baseline",
+  "dataset": {
+    "train": "D:\\financial-chatbot-ai\\data\\processed\\intent_train.csv",
+    "validation": "D:\\financial-chatbot-ai\\data\\processed\\intent_validation.csv",
+    "test": "D:\\financial-chatbot-ai\\data\\processed\\intent_test.csv",
+    "train_samples": 536,
+    "validation_samples": 115,
+    "test_samples": 116
+  },
+  "model": {
+    "type": "TF-IDF + Logistic Regression",
+    "tfidf": {
+      "analyzer": "word",
+      "ngram_range": [
+        1,
+        2
+      ],
+      "lowercase": false,
+      "min_df": 1,
+      "max_df": 0.95,
+      "sublinear_tf": true
+    },
+    "logistic_regression": {
+      "solver": "lbfgs",
+      "max_iter": 2000,
+      "class_weight": null,
+      "random_state": 42
+    }
+  },
+  "validation": {
+    "split": "validation",
+    "accuracy": 0.9565217391304348,
+    "macro_precision": 0.9708867521367521,
+    "macro_recall": 0.953525641025641,
+    "macro_f1": 0.9574045839071414,
+    "num_samples": 115,
+    "labels": [
+      "add_expense",
+      "add_income",
+      "financial_advice",
+      "query_balance",
+      "query_category",
+      "query_expense",
+      "saving_goal",
+      "set_budget"
+    ]
+  },
+  "test": {
+    "split": "test",
+    "accuracy": 0.9827586206896551,
+    "macro_precision": 0.9853846153846154,
+    "macro_recall": 0.984775641025641,
+    "macro_f1": 0.9845632165909842,
+    "num_samples": 116,
+    "labels": [
+      "add_expense",
+      "add_income",
+      "financial_advice",
+      "query_balance",
+      "query_category",
+      "query_expense",
+      "saving_goal",
+      "set_budget"
+    ]
+  }
+}

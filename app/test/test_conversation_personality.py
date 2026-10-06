@@ -112,7 +112,6 @@ thu khá nhiều. Mình thử xem khoản nào đang chi nhiều nhất trước
 
 TÍNH TỰ NHIÊN
 Ưu tiên:
-
 "Tình hình tháng này của bạn đang hơi căng một chút 😅
 Bạn thu vào 100k nhưng đã chi 400k, nên đang âm 300k.
 Mình có thể xem tiếp khoản nào đang ngốn tiền nhiều nhất cho bạn."
@@ -143,10 +142,8 @@ NGUYÊN TẮC CUỐI CÙNG
 Financial Engine quyết định số liệu.
 RAG cung cấp kiến thức.
 Conversation context cung cấp ngữ cảnh.
-Bạn chịu trách nhiệm diễn đạt tất cả những thông tin đó thành
-một câu trả lời tiếng Việt tự nhiên, thân thiện và dễ hiểu.
+Bạn chịu trách nhiệm diễn đạt tất cả những thông tin đó thành một câu trả lời tiếng Việt tự nhiên, thân thiện và dễ hiểu.
 """
-
 
 def run_case(title, user_message, context=None):
     print("\n" + "=" * 70)
@@ -157,7 +154,6 @@ def run_case(title, user_message, context=None):
         system_instruction=SYSTEM_INSTRUCTION,
         context=context,
     )
-
     assert response
     assert isinstance(response, str)
     print(f"User: {user_message}")
@@ -172,59 +168,53 @@ def test_conversation_personality():
         "CASE 1 - Financial question",
         "Tình hình tài chính của tôi hiện tại thế nào?",
         """
-Financial data:
-- total_income: 100000
-- total_expense: 400000
-- balance: -300000
-""",
+    Financial data:
+    - total_income: 100000
+    - total_expense: 400000
+    - balance: -300000
+    """,
     )
-
-    # Case 2: lời khuyên
     run_case(
         "CASE 2 - Financial advice",
         "Tôi đang âm tiền, tôi nên làm gì?",
         """
-Financial data:
-- total_income: 100000
-- total_expense: 400000
-- balance: -300000
+    Financial data:
+    - total_income: 100000
+    - total_expense: 400000
+    - balance: -300000
 
-Financial knowledge:
-- Budgeting có thể giúp người dùng theo dõi thu nhập và chi tiêu,
-  từ đó xác định các khoản có thể điều chỉnh.
-""",
+    Financial knowledge:
+    - Budgeting có thể giúp người dùng theo dõi thu nhập và chi tiêu, từ đó xác định các khoản có thể điều chỉnh.
+    """,
     )
 
-    # Case 3: clarification
     run_case(
         "CASE 3 - Ambiguous amount",
         "Mua đồ hết 200",
     )
 
-    # Case 4: natural follow-up
     run_case(
         "CASE 4 - Conversational follow-up",
         "Nhiều không?",
         """
-Conversation history:
-User: Tháng này tôi đã chi 4 triệu.
-Assistant: Mình đã ghi nhận tổng chi tiêu tháng này là 4 triệu.
+    Conversation history:
+    User: Tháng này tôi đã chi 4 triệu.
+    Assistant: Mình đã ghi nhận tổng chi tiêu tháng này là 4 triệu.
 
-Financial data:
-- total_expense: 4000000
-""",
+    Financial data:
+    - total_expense: 4000000
+    """,
     )
 
-    # Case 5: non-judgmental response
     run_case(
         "CASE 5 - Non-judgmental",
         "Tháng này tôi tiêu quá tay rồi, chắc tôi quản lý tiền tệ lắm.",
         """
-Financial data:
-- total_income: 5000000
-- total_expense: 7000000
-- balance: -2000000
-""",
+    Financial data:
+    - total_income: 5000000
+    - total_expense: 7000000
+    - balance: -2000000
+    """,
     )
 
 

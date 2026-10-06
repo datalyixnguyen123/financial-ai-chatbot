@@ -35,3 +35,7 @@ Thumbs.db
 
 # PhoBERT training outputs
 experiments/phobert_model/
+# Environment / secrets
+.env
+.env.*
+!.env.example

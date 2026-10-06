@@ -1,6 +1,6 @@
 
 from app.db import Base, engine
-from app.models import Transaction
+from app.models import Transaction, UserContext
 
 
 def init_db():

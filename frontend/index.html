@@ -1,0 +1,77 @@
+
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FinStudy AI - Trợ Lý Tài Chính Thông Minh Dành Cho Sinh Viên</title>
+    <!-- Font & Icons -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/app.css" />
+  </head>
+
+  <body>
+    <div id="welcome-screen"></div>
+    <div id="app-container">
+      <div id="app-sidebar"></div>
+      <!-- MAIN WRAPPER -->
+      <main class="main-wrapper">
+        <div id="app-header"></div>
+
+        <div id="page-home" class="page-tab active-tab">
+          <div class="grid-home">
+           <div style="grid-column: 1/2">
+             <div id="home-summary"></div>
+             <div id="home-chat"></div>
+           </div>
+
+          </div>
+        </div>
+
+        <div id="page-finance" class="page-tab">
+          <div id="finance-page"></div>
+        </div>
+
+        <div id="page-roadmap" class="page-tab"></div>
+        <div id="page-agent" class="page-tab"></div>
+        <div id="page-settings" class="page-tab"></div>
+      </main>
+    </div>
+
+    <script src="js/components/welcome.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/components/sidebar.js"></script>
+    <script src="js/components/header.js"></script>
+    <script src="js/components/home_summary.js"></script>
+
+    <script src="js/api.js"></script>
+
+    <script src="js/components/chat.js"></script>
+    <script src="js/components/chat_messages.js"></script>
+    <script src="js/components/chat_input.js"></script>
+    <script src="js/components/chat_controller.js"></script>
+    <script src="js/components/finance.js"></script>
+    <script src="js/components/roadmap.js"></script>
+
+    <!-- ==================== APP INITIALIZATION ==================== -->
+    <script>
+      renderWelcomeScreen();
+      renderSidebar();
+      renderHeader();
+      renderHomeSummary();
+      renderChat();
+      renderChatMessages();
+      renderChatInput();
+      bindChatInputEvents();
+      renderFinancePage();
+      renderRoadmapPage();
+    </script>
+  </body>
+</html>

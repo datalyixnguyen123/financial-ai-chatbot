@@ -24,7 +24,6 @@ Quy tắc:
 10. Không nói rằng bạn đã truy cập nguồn bên ngoài nếu không có context.
 11. Có thể dùng "nha", "nhé" và emoji một cách tiết chế.
 12. Ưu tiên câu trả lời tự nhiên, ngắn gọn và dễ hiểu.
-
 Financial Engine quyết định số liệu. RAG cung cấp kiến thức. Conversation history cung cấp ngữ cảnh.
 Bạn chịu trách nhiệm diễn đạt chúng thành câu trả lời tự nhiên.
 """
@@ -33,11 +32,7 @@ Bạn chịu trách nhiệm diễn đạt chúng thành câu trả lời tự nh
 def test_contextual_chat():
     history = []
     user_message_1 = "Tháng này tôi tiêu hơi nhiều."
-    add_message(
-        history,
-        "user",
-        user_message_1,
-    )
+    add_message(history, "user", user_message_1,)
     financial_result = {
         "total_income": 5000000,
         "total_expense": 7000000,
@@ -54,22 +49,18 @@ def test_contextual_chat():
         }
     ]
     context_1 = build_context(
-        conversation_history=history,
-        financial_result=financial_result,
-        retrieved_documents=retrieved_documents,
+        conversation_history = history,
+        financial_result = financial_result,
+        retrieved_documents = retrieved_documents,
     )
     response_1 = generate_response(
-        user_message=user_message_1,
-        system_instruction=SYSTEM_INSTRUCTION,
-        context=context_1,
+        user_message = user_message_1,
+        system_instruction = SYSTEM_INSTRUCTION,
+        context = context_1,
     )
     assert response_1
     assert isinstance(response_1, str)
-    add_message(
-        history,
-        "assistant",
-        response_1,
-    )
+    add_message(history, "assistant", response_1,)
 
     print("=" * 70)
     print("TURN 1")
@@ -77,26 +68,21 @@ def test_contextual_chat():
     print(f"User: {user_message_1}")
     print(f"AI: {response_1}")
 
-    
     user_message_2 = "Hơi quá tay nhỉ?"
-    add_message(
-        history,
-        "user",
-        user_message_2,
-    )
+    add_message(history, "user", user_message_2,)
     context_2 = build_context(
-        conversation_history=history,
-        financial_result=financial_result,
-        retrieved_documents=retrieved_documents,
+        conversation_history = history,
+        financial_result = financial_result,
+        retrieved_documents = retrieved_documents,
     )
     assert "Tháng này tôi tiêu hơi nhiều." in context_2
     assert response_1 in context_2
     assert "Hơi quá tay nhỉ?" in context_2
     assert "balance: -2000000" in context_2
     response_2 = generate_response(
-        user_message=user_message_2,
-        system_instruction=SYSTEM_INSTRUCTION,
-        context=context_2,
+        user_message = user_message_2,
+        system_instruction = SYSTEM_INSTRUCTION,
+        context = context_2,
     )
     assert response_2
     assert isinstance(response_2, str)

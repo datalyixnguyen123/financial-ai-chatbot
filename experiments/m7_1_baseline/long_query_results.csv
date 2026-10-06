@@ -1,0 +1,17 @@
+id,text,intent,predicted_intent,confidence,correct
+LQ01,Sau khi trừ toàn bộ các khoản mình đã chi trong tháng này thì hiện tại tài khoản còn lại bao nhiêu tiền?,query_balance,query_balance,0.5461275275707133,True
+LQ02,Từ đầu tháng tới giờ mình đã tiêu tổng cộng bao nhiêu tiền cho tất cả các khoản?,query_expense,query_expense,0.6223935933585798,True
+LQ03,Trong tháng này mình đã chi bao nhiêu tiền riêng cho việc ăn uống và đi lại?,query_category,query_expense,0.27798390140761836,False
+LQ04,"Thu nhập mỗi tháng của mình khoảng 15 triệu nhưng thường cuối tháng không còn nhiều tiền, mình nên bắt đầu quản lý tài chính như thế nào?",financial_advice,financial_advice,0.43133662361901187,True
+LQ05,Mình muốn dành dụm 30 triệu trong vòng 6 tháng tới thì mỗi tháng cần tiết kiệm khoảng bao nhiêu?,saving_goal,saving_goal,0.6191821710443731,True
+LQ06,Từ tháng này mình muốn giới hạn chi tiêu cho ăn uống tối đa 2 triệu mỗi tháng và theo dõi khoản đó.,set_budget,set_budget,0.7116807451377882,True
+LQ07,"Hôm qua mình đi siêu thị mua đồ ăn và một số vật dụng trong nhà, tổng cộng thanh toán hết khoảng 850 nghìn.",add_expense,add_expense,0.5364887044887389,True
+LQ08,Tháng này công ty vừa chuyển cho mình tiền lương khoảng 18 triệu vào tài khoản.,add_income,add_income,0.7083311080385933,True
+LQ09,Mình muốn kiểm tra xem sau tất cả những khoản mua sắm và thanh toán trong tháng này thì số dư hiện tại còn lại bao nhiêu.,query_balance,query_balance,0.5177820653571118,True
+LQ10,Bạn có thể thống kê giúp mình từ đầu tháng đến giờ tổng cộng mình đã chi bao nhiêu tiền không?,query_expense,query_expense,0.5518638176240503,True
+LQ11,"Mình muốn biết tháng này riêng khoản tiền điện, tiền ăn uống và tiền đi lại đã tiêu hết bao nhiêu.",query_category,query_category,0.29073168094287904,True
+LQ12,"Mình có thu nhập tương đối ổn định nhưng thường xuyên chi tiêu vượt kế hoạch, bạn có thể hướng dẫn mình cách quản lý tiền hiệu quả hơn không?",financial_advice,financial_advice,0.4130190900517426,True
+LQ13,"Mục tiêu của mình là tiết kiệm được 50 triệu trong 10 tháng tới, vậy mình nên dành ra bao nhiêu tiền mỗi tháng?",saving_goal,saving_goal,0.44076850014132185,True
+LQ14,Mình muốn đặt ngân sách cho việc mua sắm trong tháng này không vượt quá 3 triệu và muốn theo dõi mức sử dụng.,set_budget,set_budget,0.41770561517624694,True
+LQ15,"Cuối tuần vừa rồi mình đi ăn uống với bạn bè và mua thêm vài món đồ cá nhân, tổng số tiền đã thanh toán là khoảng 600 nghìn.",add_expense,add_expense,0.32008040720348596,True
+LQ16,Mình vừa nhận được tiền lương tháng này từ công ty chuyển vào tài khoản với số tiền khoảng 20 triệu.,add_income,add_income,0.7012250353380193,True

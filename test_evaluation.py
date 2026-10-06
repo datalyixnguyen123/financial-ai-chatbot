@@ -13,10 +13,8 @@ from sklearn.metrics import accuracy_score, classification_report
 
 train_df = pd.read_csv("data/processed/train.csv")
 test_df = pd.read_csv("data/processed/test.csv")
-
 X_train = train_df["text"]
 y_train = train_df["intent"]
-
 X_test = test_df["text"]
 y_test = test_df["intent"]
 
@@ -30,7 +28,6 @@ vectorizer = TfidfVectorizer(
     ngram_range=(1, 2),
     max_features=10000
 )
-
 X_train_tfidf = vectorizer.fit_transform(X_train)
 X_test_tfidf = vectorizer.transform(X_test)
 
@@ -40,10 +37,9 @@ X_test_tfidf = vectorizer.transform(X_test)
 # =========================
 
 model = LogisticRegression(
-    max_iter=1000,
-    random_state=42
+    max_iter = 1000,
+    random_state = 42
 )
-
 model.fit(X_train_tfidf, y_train)
 
 
@@ -59,15 +55,7 @@ y_pred = model.predict(X_test_tfidf)
 # =========================
 
 accuracy = accuracy_score(y_test, y_pred)
-
 print("\n===== TEST BASELINE RESULT =====")
 print(f"Accuracy: {accuracy:.4f}")
-
 print("\n===== CLASSIFICATION REPORT =====")
-print(
-    classification_report(
-        y_test,
-        y_pred,
-        digits=4
-    )
-)
+print(classification_report(y_test, y_pred, digits = 4))

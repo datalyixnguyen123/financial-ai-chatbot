@@ -16,23 +16,18 @@ Quy tắc:
 5. Trả lời ngắn gọn, dễ hiểu.
 """
 
-
 def test_financial_llm():
     financial_result = {
         "total_income": 100000,
         "total_expense": 400000,
         "balance": -300000,
     }
-    user_message = (
-        "Tình hình tài chính của tôi hiện tại như thế nào?"
-    )
-    context = build_context(
-        financial_result=financial_result,
-    )
+    user_message = ("Tình hình tài chính của tôi hiện tại như thế nào?")
+    context = build_context(financial_result = financial_result,)
     assert "100000" in context
     assert "400000" in context
     assert "-300000" in context
-    response = generate_response(user_message=user_message, system_instruction=SYSTEM_INSTRUCTION, context=context,)
+    response = generate_response(user_message = user_message, system_instruction = SYSTEM_INSTRUCTION, context = context,)
     assert response
     assert isinstance(response, str)
 

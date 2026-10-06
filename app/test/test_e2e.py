@@ -6,6 +6,10 @@ from app.main import app
 from app.db import SessionLocal
 from app.models import Transaction
 
+from dotenv import load_dotenv
+load_dotenv()
+
+
 client = TestClient(app)
 
 def get_transaction_count():

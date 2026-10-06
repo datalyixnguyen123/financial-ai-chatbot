@@ -1,2 +1,162 @@
-
-id,text,category
+﻿id,text,category
+1,Nay ăn phở 50k,food
+6,Sáng nay mua bánh mì 25k,food
+15,Mới mua đôi giày hết 800k,shopping
+16,Tối qua đi ăn lẩu hết 350k,food
+26,Sáng nay mua xôi 20k,food
+27,Ăn trưa hết 65 nghìn,food
+28,Mới cafe 45k,food
+29,Tối qua đi xem phim hết 180k,entertainment
+30,Vừa thanh toán tiền điện 520 nghìn,bills
+31,Mua sách hết 120k,education
+32,Đi taxi mất 90k,transport
+33,Tháng này vừa đóng tiền nhà 5 triệu,rent
+34,Mua thuốc hết 150 nghìn,health
+36,Ăn sáng 30 nghìn,food
+38,Mua vé xe 200k,transport
+39,Vừa trả tiền internet 300 nghìn,bills
+40,Mới mua cái áo 350k,shopping
+41,Trưa nay ăn cơm hết 40k,food
+43,Đi Grab hết 75k,transport
+44,Cuối tuần đi chơi tốn 500k,entertainment
+45,Mua bánh sinh nhật 300 nghìn,other
+46,Đã thanh toán hóa đơn điện nước 800k,bills
+47,Mua thuốc cảm 60k rồi,health
+48,Vừa mua tai nghe hết 1 triệu,shopping
+49,Ăn lẩu hết 450 nghìn,food
+50,Mới trả tiền thuê nhà 7 củ,rent
+126,Nay ăn bún 40k,food
+127,Sáng làm tô phở 55 nghìn,food
+128,Uống trà sữa hết 35k,food
+129,Mới mua quần áo 600k,shopping
+130,Đi xe ôm hết 50 nghìn,transport
+132,Vừa đóng tiền điện 450k,bills
+133,Mua thuốc ở hiệu thuốc 85 nghìn,health
+134,Tiền nhà tháng này 6 triệu,rent
+135,Mua vở với bút hết 150k,education
+136,Ăn tối 120k nha,food
+137,Grab hôm nay 65k,transport
+138,Cafe sáng 30 nghìn,food
+139,Mua đồ Shopee 250k,shopping
+141,Đi siêu thị hết 800 nghìn,shopping
+142,Vừa trả hóa đơn mạng 220k,bills
+143,Mua thuốc 2 trăm nghìn,health
+144,Ăn uống hôm nay hết 90k,food
+145,Mới mua balo 400 nghìn,shopping
+146,Chi 70k tiền ăn trưa,food
+147,Mua vé tàu hết 300k,transport
+148,Tối nay nhậu hết 500 nghìn,food
+149,Đóng học phí 3 triệu,education
+150,Mua quà sinh nhật hết 350k,other
+226,Chiều nay mua trà sữa 40k,food
+227,Vừa ăn cơm văn phòng hết 75 nghìn,food
+228,Mới gọi đồ ăn hết 120k,food
+229,Sáng nay đi bus mất 15k,transport
+230,Mua mỹ phẩm hết 450 nghìn,shopping
+231,Tối qua đi karaoke hết 600k,entertainment
+232,Vừa thanh toán tiền nước 180k,bills
+233,Mua thuốc cho mẹ hết 320 nghìn,health
+234,Đóng tiền phòng 4 triệu rồi,rent
+235,Mua khóa học online hết 900k,education
+236,Ăn sáng với bạn hết 80k,food
+237,Đi GrabBike hết 35 nghìn,transport
+238,Mua quần jean 550k,shopping
+239,Vừa nạp tiền điện thoại 100k,bills
+240,Đi siêu thị mua đồ hết 650 nghìn,shopping
+241,Mới trả tiền wifi 250k,bills
+242,Mua quyển sách này 180 nghìn,education
+243,Hôm qua đi ăn hết gần 300k,food
+244,Mua vé concert hết 1 triệu 2,entertainment
+326,Trưa nay ăn bún bò 65k,food
+327,Sáng mua bánh mì với sữa hết 35 nghìn,food
+328,Vừa gọi cơm ship hết 90k,food
+329,Uống cà phê hết 50 nghìn rồi,food
+330,Mới mua áo khoác 700k,shopping
+331,Đi xem phim với bạn hết 220k,entertainment
+332,Vừa thanh toán hóa đơn điện 380 nghìn,bills
+333,Mua thuốc hết 125k ở nhà thuốc,health
+334,Tháng này trả tiền thuê nhà 5 củ,rent
+335,Mua tài liệu học tập hết 180 nghìn,education
+336,Đi xe buýt hôm nay hết 10k,transport
+338,Mua giày hết 1 triệu 1,shopping
+339,Vừa thanh toán tiền mạng 280k,bills
+340,Tối qua ăn nhà hàng hết 450 nghìn,food
+341,Mua đồ gia dụng hết 600k,shopping
+342,Đi taxi hết 120 nghìn,transport
+343,Vừa đóng học phí 2 triệu rưỡi,education
+344,Mua quà cho bạn hết 250k,other
+345,Ăn vặt chiều nay hết 45 nghìn,food
+426,Nay ăn cơm hết 55k,food
+427,Sáng làm tô mì 30 nghìn,food
+428,Vừa đặt đồ ăn 85k,food
+429,Mới uống cafe 40k,food
+430,Mua cái quần 450k,shopping
+431,Tối qua đi chơi hết 300 nghìn,entertainment
+432,Tiền điện vừa đóng 420k,bills
+433,Mua thuốc hết 90 nghìn,health
+434,Phòng tháng này 5 triệu,rent
+435,Mua sách online 160k,education
+436,Đi Grab hết 60 nghìn,transport
+438,Mua đôi dép 200 nghìn,shopping
+439,Vừa trả tiền mạng 300k,bills
+440,Ăn lẩu với bạn hết 500 nghìn,food
+441,Mua đồ siêu thị hết 350k,shopping
+442,Đi taxi mất 100 nghìn,transport
+443,Đóng học phí 4 triệu,education
+444,Mua quà hết 280k,other
+445,Ăn sáng mất 25 nghìn,food
+526,Sáng nay ăn phở 60k,food
+527,Mới mua bánh ngọt 35 nghìn,food
+528,Trưa đặt cơm hết 70k,food
+529,Uống trà sữa mất 45k,food
+530,Mua áo sơ mi 500 nghìn,shopping
+531,Tối qua xem phim hết 150k,entertainment
+532,Vừa đóng hóa đơn nước 200 nghìn,bills
+533,Mua thuốc cảm hết 75k,health
+534,Tiền phòng tháng này 4 triệu rưỡi,rent
+536,Đi xe ôm công nghệ hết 40 nghìn,transport
+538,Mua cái balo 350 nghìn,shopping
+539,Vừa thanh toán wifi 250k,bills
+540,Ăn tối ở ngoài hết 180 nghìn,food
+541,Đi siêu thị hết 700k,shopping
+542,Đi taxi mất 130 nghìn,transport
+543,Đóng tiền học 3 triệu,education
+544,Mua quà cho mẹ hết 400k,other
+545,Ăn sáng hết 30 nghìn,food
+626,Sáng nay ăn xôi hết 25k,food
+627,Mua tô phở 50 nghìn,food
+628,Trưa gọi cơm hết 65k,food
+629,Uống cà phê sáng mất 35 nghìn,food
+630,Mua cái áo mới 600k,shopping
+631,Đi xem phim hết 180 nghìn,entertainment
+632,Vừa trả tiền điện 450k,bills
+633,Mua thuốc ở hiệu thuốc 100 nghìn,health
+634,Tiền thuê nhà tháng này 5 triệu,rent
+635,Mua sách hết 200k,education
+636,Đi Grab hết 55 nghìn,transport
+638,Mua quần áo hết 750 nghìn,shopping
+639,Vừa thanh toán tiền internet 280k,bills
+640,Tối qua ăn ngoài hết 250 nghìn,food
+642,Mua vé xe khách 220 nghìn,transport
+643,Đóng học phí hết 3 triệu,education
+644,Mua quà sinh nhật 350k,other
+645,Ăn vặt hết 40 nghìn,food
+726,Nay ăn sáng hết 30k,food
+727,Mua cơm trưa 55 nghìn,food
+728,Vừa đặt trà sữa 40k,food
+729,Mới mua áo 300 nghìn,shopping
+730,Đi xe ôm hết 45k,transport
+731,Tối qua xem phim mất 160 nghìn,entertainment
+732,Vừa đóng tiền điện 500k,bills
+733,Mua thuốc hết 120 nghìn,health
+734,Tiền phòng tháng này 4 triệu,rent
+735,Mua sách 150k,education
+736,Đi Grab hết 70 nghìn,transport
+738,Mua giày 800 nghìn,shopping
+739,Trả tiền wifi 250k rồi,bills
+740,Ăn tối ngoài quán hết 200 nghìn,food
+741,Đi siêu thị hết 500k,shopping
+742,Mua vé tàu 300 nghìn,transport
+743,Đóng học phí 2 triệu,education
+744,Mua quà hết 350k,other
+745,Uống cafe hết 45 nghìn,food

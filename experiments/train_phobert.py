@@ -18,12 +18,9 @@ from sklearn.metrics import accuracy_score, precision_recall_fscore_support
 # =========================
 
 MODEL_NAME = "vinai/phobert-base-v2"
-
 TRAIN_FILE = "data/processed/train.csv"
 VALIDATION_FILE = "data/processed/validation.csv"
-
 OUTPUT_DIR = "experiments/phobert_model"
-
 MAX_LENGTH = 64
 RANDOM_STATE = 42
 
@@ -34,14 +31,12 @@ RANDOM_STATE = 42
 
 train_df = pd.read_csv(TRAIN_FILE)
 validation_df = pd.read_csv(VALIDATION_FILE)
-
 required_columns = ["text", "intent"]
 
 if list(train_df.columns) != ["id", "text", "intent"]:
     raise ValueError(
         f"Train columns không đúng: {list(train_df.columns)}"
     )
-
 if list(validation_df.columns) != ["id", "text", "intent"]:
     raise ValueError(
         f"Validation columns không đúng: {list(validation_df.columns)}"
@@ -53,22 +48,18 @@ if list(validation_df.columns) != ["id", "text", "intent"]:
 # =========================
 
 labels = sorted(train_df["intent"].unique())
-
 label2id = {
     label: idx
     for idx, label in enumerate(labels)
 }
-
 id2label = {
     idx: label
     for label, idx in label2id.items()
 }
 
 print("\n===== LABEL MAPPING =====")
-
 for label, idx in label2id.items():
     print(f"{idx}: {label}")
-
 
 train_df["label"] = train_df["intent"].map(label2id)
 validation_df["label"] = validation_df["intent"].map(label2id)
@@ -82,7 +73,6 @@ train_dataset = Dataset.from_pandas(
     train_df[["text", "label"]],
     preserve_index=False
 )
-
 validation_dataset = Dataset.from_pandas(
     validation_df[["text", "label"]],
     preserve_index=False
@@ -94,9 +84,7 @@ validation_dataset = Dataset.from_pandas(
 # =========================
 
 print("\n===== LOADING TOKENIZER =====")
-
 tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
-
 
 def tokenize_function(examples):
     return tokenizer(
@@ -106,12 +94,10 @@ def tokenize_function(examples):
         max_length=MAX_LENGTH,
     )
 
-
 train_dataset = train_dataset.map(
     tokenize_function,
     batched=True
 )
-
 validation_dataset = validation_dataset.map(
     tokenize_function,
     batched=True
@@ -137,23 +123,18 @@ model = AutoModelForSequenceClassification.from_pretrained(
 # =========================
 
 def compute_metrics(eval_pred):
-
     logits, labels_true = eval_pred
-
     predictions = np.argmax(logits, axis=-1)
-
     accuracy = accuracy_score(
         labels_true,
         predictions
     )
-
     precision, recall, f1, _ = precision_recall_fscore_support(
         labels_true,
         predictions,
         average="macro",
         zero_division=0
     )
-
     return {
         "accuracy": accuracy,
         "macro_precision": precision,
@@ -168,29 +149,18 @@ def compute_metrics(eval_pred):
 
 training_args = TrainingArguments(
     output_dir=OUTPUT_DIR,
-
     eval_strategy="epoch",
     save_strategy="epoch",
-
     learning_rate=2e-5,
-
     per_device_train_batch_size=4,
     per_device_eval_batch_size=4,
-
     num_train_epochs=3,
-
     weight_decay=0.01,
-
     load_best_model_at_end=True,
-
     metric_for_best_model="macro_f1",
-
     greater_is_better=True,
-
     logging_steps=20,
-
     report_to="none",
-
     seed=RANDOM_STATE,
 )
 

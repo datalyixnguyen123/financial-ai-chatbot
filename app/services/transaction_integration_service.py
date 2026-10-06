@@ -1,9 +1,11 @@
 
+
 from datetime import date
 from sqlalchemy.orm import Session
 from app.services.normalization_service import normalize_transaction
 from app.services.transaction_service import create_transaction
-
+from sqlalchemy import desc
+from app.models import Transaction
 
 def save_normalized_transaction(
     db: Session,
@@ -18,27 +20,37 @@ def save_normalized_transaction(
     reference_date: date | None = None,
 ):
     normalized = normalize_transaction(
-        amount=amount,
-        category=category,
-        date_value=date_value,
-        merchant=merchant,
-        description=description,
-        payment_method=payment_method,
-        period=period,
-        reference_date=reference_date,
+        amount = amount,
+        category = category,
+        date_value = date_value,
+        merchant = merchant,
+        description = description,
+        payment_method = payment_method,
+        period = period,
+        reference_date = reference_date,
     )
 
     if normalized["amount"] is None:
-        raise ValueError("Transaction amount is required")
+        raise ValueError("Transaction amount is required!")
     transaction = create_transaction(
-        db=db,
-        transaction_type=transaction_type,
-        amount=normalized["amount"],
-        category=normalized["category"],
-        date=normalized["date"],
-        merchant=normalized["merchant"],
-        description=normalized["description"],
-        payment_method=normalized["payment_method"],
+        db = db,
+        transaction_type = transaction_type,
+        amount = normalized["amount"],
+        category = normalized["category"],
+        date = normalized["date"],
+        merchant = normalized["merchant"],
+        description = normalized["description"],
+        payment_method = normalized["payment_method"],
     )
+    return transaction
 
+
+def update_latest_transaction_amount(db: Session, transaction_type: str, amount: float,) -> Transaction | None:
+    transaction = (db.query(Transaction).filter(Transaction.transaction_type == transaction_type,).order_by(desc(Transaction.id)).first())
+
+    if transaction is None:
+        return None
+    transaction.amount = amount
+    db.commit()
+    db.refresh(transaction)
     return transaction

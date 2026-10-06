@@ -21,7 +21,7 @@ def test_rag_llm():
     user_message = "Quỹ khẩn cấp là gì?"
     retrieved_documents = retrieve(
         user_message,
-        top_k=3,
+        top_k = 3,
     )
     assert retrieved_documents
     assert retrieved_documents[0]["topic"] == "emergency_fund"

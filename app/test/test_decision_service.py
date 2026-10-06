@@ -7,8 +7,7 @@ def run_case(name, **kwargs):
     print(result)
     return result
 
-r1 = run_case(
-    "clear expense",
+r1 = run_case("clear expense",
     message="Hôm nay mình ăn trưa hết 80 nghìn",
     intent="add_expense",
     confidence=0.8734315,
@@ -18,8 +17,7 @@ r1 = run_case(
 assert r1["decision"] == "accept"
 
 
-r2 = run_case(
-    "ambiguous amount",
+r2 = run_case("ambiguous amount",
     message="Mua đồ hết 200",
     intent="add_expense",
     confidence=0.894826,
@@ -30,8 +28,7 @@ assert r2["decision"] == "clarification"
 assert r2["reason"] == "ambiguous_amount"
 
 
-r3 = run_case(
-    "clear income medium confidence",
+r3 = run_case("clear income medium confidence",
     message="Tháng này mình nhận lương 15 triệu",
     intent="add_income",
     confidence=0.8449294,
@@ -45,8 +42,7 @@ assert r3["decision"] == "accept"
 assert r3["reason"] == "strong_entity_and_context_evidence"
 
 
-r4 = run_case(
-    "balance query",
+r4 = run_case("balance query",
     message="Số dư hiện tại của mình là bao nhiêu?",
     intent="query_balance",
     confidence=0.7081225,
@@ -55,14 +51,13 @@ r4 = run_case(
 assert r4["decision"] == "accept"
 
 
-r5 = run_case(
-    "unknown",
+r5 = run_case("unknown",
     message="asdfghjkl",
     intent="unknown",
     confidence=0.2648769,
     entities={},
 )
-assert r5["decision"] == "unknown"
+assert r5["decision"] == "general_conversation"
 
 print("\n[low confidence]")
 result = decide(
@@ -84,7 +79,7 @@ result = decide(
     raw_amount=None,
 )
 print(result)
-assert result["decision"] == "unknown"
+assert result["decision"] == "general_conversation"
 assert result["reason"] == "low_intent_confidence"
 
 print("\nALL DECISION TESTS PASSED")

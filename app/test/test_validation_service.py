@@ -5,9 +5,9 @@ from app.services.validation_service import is_ambiguous_amount
 
 def test_valid_ai_output():
     result = validate_ai_output(
-        intent="add_expense",
-        confidence=0.95,
-        amount=50000,
+        intent = "add_expense",
+        confidence = 0.95,
+        amount = 50000,
     )
     assert result["valid"] is True
     assert result["status"] == "accepted"
@@ -15,9 +15,9 @@ def test_valid_ai_output():
 
 def test_invalid_intent():
     result = validate_ai_output(
-        intent="invalid_intent",
-        confidence=0.95,
-        amount=50000,
+        intent = "invalid_intent",
+        confidence = 0.95,
+        amount = 50000,
     )
     assert result["valid"] is False
     assert "INVALID_INTENT" in result["errors"]
@@ -25,9 +25,9 @@ def test_invalid_intent():
 
 def test_invalid_confidence():
     result = validate_ai_output(
-        intent="add_expense",
-        confidence=1.5,
-        amount=50000,
+        intent = "add_expense",
+        confidence = 1.5,
+        amount = 50000,
     )
     assert result["valid"] is False
     assert "INVALID_CONFIDENCE" in result["errors"]
@@ -35,9 +35,9 @@ def test_invalid_confidence():
 
 def test_invalid_amount():
     result = validate_ai_output(
-        intent="add_expense",
-        confidence=0.95,
-        amount=-50000,
+        intent = "add_expense",
+        confidence = 0.95,
+        amount = -50000,
     )
     assert result["valid"] is False
     assert "INVALID_AMOUNT" in result["errors"]

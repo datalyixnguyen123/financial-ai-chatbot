@@ -30,14 +30,13 @@ def main():
     for case in TEST_CASES:
         results = retrieve(
             case["query"],
-            top_k=1,
+            top_k = 1,
         )
         top_result = results[0]
         predicted_topic = top_result["topic"]
         is_correct = (
             predicted_topic == case["expected_topic"]
         )
-
         if is_correct:
             correct += 1
         print(
@@ -59,9 +58,7 @@ def main():
     accuracy = correct / len(TEST_CASES)
     print("\n====================")
     print(f"Top-1 Accuracy: {accuracy:.4f}")
-    print(
-        f"Correct: {correct}/{len(TEST_CASES)}"
-    )
+    print(f"Correct: {correct}/{len(TEST_CASES)}")
 
 if __name__ == "__main__":
     main()

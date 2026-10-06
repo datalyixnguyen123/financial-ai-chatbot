@@ -42,13 +42,11 @@ def retrieve(query: str, top_k: int = 3):
         result["score"] = float(score)
 
         results.append(result)
-
     return results
-
 
 if __name__ == "__main__":
     query = "Làm thế nào để lập ngân sách cá nhân?"
-    results = retrieve(query, top_k=3)
+    results = retrieve(query, top_k = 3)
     print(f"\nQuery: {query}\n")
     for rank, result in enumerate(results, start=1):
         print(f"--- Result {rank} ---")

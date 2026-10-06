@@ -1,7 +1,6 @@
 
 from app.services.normalization_service import normalize_amount
 
-
 TEST_CASES = [
     ("50k", 50_000),
     ("50 nghìn", 50_000),
@@ -23,13 +22,10 @@ TEST_CASES = [
 
 for raw_value, expected in TEST_CASES:
     result = normalize_amount(raw_value)
-
     assert result == expected, (
         f"FAILED: {raw_value} "
         f"expected={expected}, got={result}"
     )
-
     print(f"PASS: {raw_value} -> {result}")
-
 
 print("\nAll normalization tests passed.")

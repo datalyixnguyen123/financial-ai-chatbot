@@ -26,11 +26,7 @@ def validate_amount(amount) -> bool:
     except (TypeError, ValueError):
         return False
 
-def validate_ai_output(
-    intent: str,
-    confidence: float,
-    amount=None,
-) -> dict:
+def validate_ai_output(intent: str, confidence: float, amount=None,) -> dict:
     errors = []
     if not validate_intent(intent):
         errors.append("INVALID_INTENT")
@@ -50,11 +46,7 @@ def get_confidence_status(confidence: float) -> str:
         return "clarification"
     return "unknown"
 
-def validate_ai_output(
-    intent: str,
-    confidence: float,
-    amount=None,
-) -> dict:
+def validate_ai_output(intent: str, confidence: float, amount=None,) -> dict:
     errors = []
     if not validate_intent(intent):
         errors.append("INVALID_INTENT")
@@ -75,10 +67,6 @@ def validate_ai_output(
     }
 
 def is_ambiguous_amount(amount) -> bool:
-    """
-    Phát hiện các amount dạng số đơn giản có thể thiếu đơn vị.
-    Ví dụ: 200 có thể là 200 VND hoặc 200.000 VND.
-    """
     if amount is None:
         return False
     if isinstance(amount, (int, float)):
@@ -95,7 +83,6 @@ def is_ambiguous_amount(amount) -> bool:
         )
         if any(unit in value for unit in explicit_units):
             return False
-        # Chỉ gồm số nguyên → có khả năng thiếu đơn vị.
         return value.isdigit()
     return False
 

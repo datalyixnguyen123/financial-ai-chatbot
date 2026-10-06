@@ -2,14 +2,10 @@
 from typing import Any, Dict, Optional
 
 ACCEPT_THRESHOLD = 0.85
-LOW_CONFIDENCE_THRESHOLD = 0.60
+LOW_CONFIDENCE_THRESHOLD = 0.65
 
 
 def _is_clear_amount(raw_amount: Optional[str]) -> bool:
-    """
-    Amount is considered clear when it contains an explicit unit.
-    Pure numeric strings such as '200' remain ambiguous.
-    """
     if raw_amount is None:
         return False
 
@@ -28,15 +24,7 @@ def _is_clear_amount(raw_amount: Optional[str]) -> bool:
         return True
     return False
 
-
-def _has_required_evidence(
-    intent: str,
-    entities: Dict[str, Any],
-) -> bool:
-    """
-    Check whether the minimum evidence required by the current
-    M7.3.3 decision design is present.
-    """
+def _has_required_evidence(intent: str, entities: Dict[str, Any],) -> bool:
     if intent in {"add_expense", "add_income"}:
         return entities.get("amount") is not None
     if intent in {"query_balance", "query_expense"}:
@@ -46,31 +34,21 @@ def _has_required_evidence(
     if intent == "set_budget":
         return entities.get("budget_limit") is not None
     if intent == "saving_goal":
-        return (
-            entities.get("target_amount") is not None
-            and entities.get("duration") is not None
-        )
+        return (entities.get("target_amount") is not None and entities.get("duration") is not None)
     if intent == "financial_advice":
         return True
 
     return False
 
 
-def _has_strong_context(
-    intent: str,
-    message: str,
-) -> bool:
-    """
-    Supporting contextual evidence.
-    This does not override a weak/incorrect intent prediction.
-    """
+def _has_strong_context(intent: str, message: str,) -> bool:
     text = message.strip().lower()
     if intent == "add_income":
         keywords = (
             "nhận lương",
             "nhận tiền",
             "được thưởng",
-            "thu nhập",
+            "thu nhập"
         )
         return any(keyword in text for keyword in keywords)
     if intent == "add_expense":
@@ -80,6 +58,8 @@ def _has_strong_context(
             "chi",
             "trả",
             "thanh toán",
+            "tiêu tốn",
+            "tiêu xài"
         )
         return any(keyword in text for keyword in keywords)
     if intent == "query_balance":
@@ -87,6 +67,7 @@ def _has_strong_context(
             "số dư",
             "còn bao nhiêu",
             "còn lại",
+            "tiền tồn"
         )
         return any(keyword in text for keyword in keywords)
     if intent == "query_expense":
@@ -99,37 +80,16 @@ def _has_strong_context(
     return False
 
 
-def decide(
-    *,
-    message: str,
-    intent: str,
-    confidence: float,
-    entities: Dict[str, Any],
-    raw_amount: Optional[str] = None,
-) -> Dict[str, Any]:
-    """
-    M7.3.3 Evidence-Based Decision Layer V1.
-    Returns:
-        decision:
-            accept | clarification | unknown
-        reason:
-            machine-readable decision reason
-        needs_clarification:
-            bool
-        clarification_question:
-            optional user-facing question
-    """
+def decide(*, message: str, intent: str, confidence: float, entities: Dict[str, Any], raw_amount: Optional[str] = None,) -> Dict[str, Any]:
     intent = intent or "unknown"
     confidence = float(confidence or 0.0)
+
     if intent == "unknown":
         return {
-            "decision": "unknown",
-            "reason": "unknown_intent",
-            "needs_clarification": True,
-            "clarification_question": (
-                "Mình chưa hiểu rõ yêu cầu của bạn. "
-                "Bạn có thể diễn đạt lại giúp mình nhé?"
-            ),
+            "decision": "general_conversation",
+            "reason": "not_financial_routing_to_llm",
+            "needs_clarification": False,
+            "clarification_question": None,
         }
 
     if intent in {"add_expense", "add_income"}:
@@ -144,20 +104,15 @@ def decide(
                 ),
             }
 
-    # ------------------------------------------------------------
-    # Very low-confidence intent should be treated as unknown.
+    # Very low-confidence intent should be treated as unknown
     if confidence < LOW_CONFIDENCE_THRESHOLD:
         return {
-            "decision": "unknown",
+            "decision": "general_conversation",
             "reason": "low_intent_confidence",
-            "needs_clarification": True,
-            "clarification_question": (
-                "Mình chưa hiểu rõ yêu cầu của bạn. "
-                "Bạn có thể diễn đạt lại giúp mình nhé?"
-            ),
+            "needs_clarification": False,
+            "clarification_question": None,
         }
-    # Critical required evidence.
-    # ------------------------------------------------------------
+
     if not _has_required_evidence(intent, entities):
         return {
             "decision": "clarification",
@@ -169,9 +124,7 @@ def decide(
             ),
         }
 
-    # ------------------------------------------------------------
-    # High-confidence prediction.
-    # ------------------------------------------------------------
+    # High-confidence prediction
     if confidence >= ACCEPT_THRESHOLD:
         return {
             "decision": "accept",
@@ -180,19 +133,11 @@ def decide(
             "clarification_question": None,
         }
 
-    # ------------------------------------------------------------
-    # Medium-confidence prediction:
-    # accept when contextual/entity evidence is sufficiently strong.
-    # ------------------------------------------------------------
+    # Medium-confidence prediction: accept when contextual/entity evidence is sufficiently strong.
     if confidence >= LOW_CONFIDENCE_THRESHOLD:
         strong_context = _has_strong_context(intent, message)
-
         if intent in {"add_income", "add_expense"}:
-            amount_clear = (
-                raw_amount is not None
-                and _is_clear_amount(raw_amount)
-            )
-
+            amount_clear = (raw_amount is not None and _is_clear_amount(raw_amount))
             if amount_clear and strong_context:
                 return {
                     "decision": "accept",
@@ -200,7 +145,6 @@ def decide(
                     "needs_clarification": False,
                     "clarification_question": None,
                 }
-
         if intent in {
             "query_balance",
             "query_expense",
@@ -215,7 +159,6 @@ def decide(
                 "needs_clarification": False,
                 "clarification_question": None,
             }
-
         return {
             "decision": "clarification",
             "reason": "insufficient_evidence",
@@ -226,16 +169,10 @@ def decide(
             ),
         }
 
-    # ------------------------------------------------------------
-    # Low confidence.
-    # ------------------------------------------------------------
     return {
-        "decision": "unknown",
+        "decision": "general_conversation",
         "reason": "low_intent_confidence",
-        "needs_clarification": True,
-        "clarification_question": (
-            "Mình chưa đủ chắc chắn về yêu cầu này. "
-            "Bạn có thể nói rõ hơn giúp mình nhé?"
-        ),
+        "needs_clarification": False,
+        "clarification_question": None,
     }
 

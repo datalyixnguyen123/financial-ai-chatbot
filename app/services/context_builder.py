@@ -1,10 +1,9 @@
 
+
 def build_financial_context(financial_result: dict | None = None,) -> str:
     if not financial_result:
         return ""
-    lines = [
-        "Financial data:",
-    ]
+    lines = ["Financial data:",]
     for key, value in financial_result.items():
         if value is not None:
             lines.append(f"- {key}: {value}")
@@ -14,9 +13,7 @@ def build_financial_context(financial_result: dict | None = None,) -> str:
 def build_knowledge_context(retrieved_documents: list[dict] | None = None,) -> str:
     if not retrieved_documents:
         return ""
-    sections = [
-        "Financial knowledge:",
-    ]
+    sections = ["Financial knowledge:",]
     for index, document in enumerate(
         retrieved_documents,
         start=1,
@@ -62,19 +59,13 @@ def build_context(
     conversation_history: list[dict[str, str]] | None = None,
 ) -> str:
     parts = []
-    conversation_context = build_conversation_context(
-        conversation_history
-    )
+    conversation_context = build_conversation_context(conversation_history)
     if conversation_context:
         parts.append(conversation_context)
-    financial_context = build_financial_context(
-        financial_result
-    )
+    financial_context = build_financial_context(financial_result)
     if financial_context:
         parts.append(financial_context)
-    knowledge_context = build_knowledge_context(
-        retrieved_documents
-    )
+    knowledge_context = build_knowledge_context(retrieved_documents)
     if knowledge_context:
         parts.append(knowledge_context)
     return "\n\n".join(parts)

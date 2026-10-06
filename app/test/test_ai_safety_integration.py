@@ -1,13 +1,15 @@
-﻿from fastapi.testclient import TestClient
+﻿
+from fastapi.testclient import TestClient
 from sqlalchemy import func
 
 from app.main import app
 from app.db import SessionLocal
 from app.models import Transaction
 
+from dotenv import load_dotenv
+load_dotenv()
 
 client = TestClient(app)
-
 
 def get_transaction_count():
     db = SessionLocal()
@@ -15,7 +17,6 @@ def get_transaction_count():
         return db.query(func.count(Transaction.id)).scalar()
     finally:
         db.close()
-
 
 def test_clarification_does_not_write_db():
     before_count = get_transaction_count()
@@ -26,10 +27,8 @@ def test_clarification_does_not_write_db():
             "message": "Mua đồ hết 200"
         },
     )
-
     after_count = get_transaction_count()
     data = response.json()
-
     assert response.status_code == 200
     assert data["intent"] == "add_expense"
     assert data["status"] == "clarification"
@@ -41,17 +40,13 @@ def test_clarification_does_not_write_db():
 
 def test_unknown_does_not_write_db():
     before_count = get_transaction_count()
-
-    response = client.post(
-        "/api/ai/analyze",
+    response = client.post("/api/ai/analyze",
         json={
             "message": "asdfghjkl"
         },
     )
-
     after_count = get_transaction_count()
     data = response.json()
-
     assert response.status_code == 200
     assert data["intent"] == "unknown"
     assert data["status"] == "unknown"

@@ -17,10 +17,7 @@ def test_llm_response():
     response = generate_response(
         user_message="Quỹ khẩn cấp là gì?",
         system_instruction=SYSTEM_INSTRUCTION,
-        context=(
-            "Quỹ khẩn cấp là khoản tiền dành cho "
-            "những chi phí bất ngờ hoặc trường hợp khẩn cấp."
-        ),
+        context=("Quỹ khẩn cấp là khoản tiền dành cho " "những chi phí bất ngờ hoặc trường hợp khẩn cấp."),
     )
     assert response
     assert isinstance(response, str)

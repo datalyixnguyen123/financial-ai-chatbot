@@ -2,19 +2,9 @@
 import re
 from typing import Optional
 from datetime import date, timedelta
+from calendar import monthrange
 
 def normalize_amount(value: Optional[str]) -> Optional[float]:
-    """
-    Convert Vietnamese natural-language money expressions to VND.
-    Examples:
-        50k -> 50000
-        50 nghìn -> 50000
-        1 triệu -> 1000000
-        2 củ -> 2000000
-        1 triệu rưỡi -> 1500000
-        5 chục -> 50000
-        năm chục -> 50000
-    """
     if value is None:
         return None
     text = str(value).strip().lower()
@@ -25,10 +15,7 @@ def normalize_amount(value: Optional[str]) -> Optional[float]:
         return 50_000
 
     # Special case: "rưỡi"
-    match = re.fullmatch(
-        r"(\d+(?:\.\d+)?)\s*triệu\s*rưỡi",
-        text
-    )
+    match = re.fullmatch(r"(\d+(?:\.\d+)?)\s*triệu\s*rưỡi", text)
     if match:
         number = float(match.group(1))
         return number * 1_500_000
@@ -45,43 +32,28 @@ def normalize_amount(value: Optional[str]) -> Optional[float]:
         return millions * 1_000_000 + thousands * 1_000
 
     # "50k"
-    match = re.fullmatch(
-        r"(\d+(?:\.\d+)?)\s*k",
-        text
-    )
+    match = re.fullmatch(r"(\d+(?:\.\d+)?)\s*k", text)
     if match:
         return float(match.group(1)) * 1_000
 
     # "50 nghìn" / "50 ngàn"
-    match = re.fullmatch(
-        r"(\d+(?:\.\d+)?)\s*(?:nghìn|ngàn)",
-        text
-    )
+    match = re.fullmatch(r"(\d+(?:\.\d+)?)\s*(?:nghìn|ngàn)", text)
 
     if match:
         return float(match.group(1)) * 1_000
 
     # "50 triệu"
-    match = re.fullmatch(
-        r"(\d+(?:\.\d+)?)\s*triệu",
-        text
-    )
+    match = re.fullmatch(r"(\d+(?:\.\d+)?)\s*triệu", text)
     if match:
         return float(match.group(1)) * 1_000_000
 
     # "2 củ"
-    match = re.fullmatch(
-        r"(\d+(?:\.\d+)?)\s*củ",
-        text
-    )
+    match = re.fullmatch(r"(\d+(?:\.\d+)?)\s*củ", text)
     if match:
         return float(match.group(1)) * 1_000_000
 
     # "5 chục"
-    match = re.fullmatch(
-        r"(\d+(?:\.\d+)?)\s*chục",
-        text
-    )
+    match = re.fullmatch(r"(\d+(?:\.\d+)?)\s*chục", text)
     if match:
         return float(match.group(1)) * 10_000
 
@@ -134,10 +106,7 @@ def normalize_date(
     }:
         return (reference_date + timedelta(days=1)).isoformat()
     # ISO: YYYY-MM-DD
-    match = re.fullmatch(
-        r"(\d{4})-(\d{1,2})-(\d{1,2})",
-        text
-    )
+    match = re.fullmatch(r"(\d{4})-(\d{1,2})-(\d{1,2})", text)
     if match:
         year, month, day = map(int, match.groups())
         try:
@@ -146,10 +115,7 @@ def normalize_date(
             return None
 
     # Vietnamese/common: DD/MM/YYYY or DD-MM-YYYY
-    match = re.fullmatch(
-        r"(\d{1,2})[/-](\d{1,2})[/-](\d{4})",
-        text
-    )
+    match = re.fullmatch(r"(\d{1,2})[/-](\d{1,2})[/-](\d{4})", text)
     if match:
         day, month, year = map(int, match.groups())
         try:
@@ -160,18 +126,6 @@ def normalize_date(
 
 
 def normalize_period(value: Optional[str]) -> Optional[str]:
-    """
-    Normalize time-period expressions.
-    Examples:
-        tháng này -> this_month
-        tháng trước -> last_month
-        mỗi tháng -> monthly
-        hàng tháng -> monthly
-        tuần này -> this_week
-        tuần trước -> last_week
-        7 ngày -> 7_days
-        6 tháng -> 6_months
-    """
     if value is None:
         return None
     text = str(value).strip().lower()
@@ -204,6 +158,40 @@ def normalize_period(value: Optional[str]) -> Optional[str]:
         return f"{match.group(1)}_months"
     return None
 
+
+def get_period_date_range(period: str, reference_date: date | None = None,) -> tuple[date, date] | None:
+    if reference_date is None:
+        reference_date = date.today()
+
+    if period == "this_month":
+        start_date = reference_date.replace(day=1)
+        last_day = monthrange(
+            reference_date.year,
+            reference_date.month,
+        )[1]
+        end_date = reference_date.replace(day=last_day)
+        return start_date, end_date
+
+    if period == "last_month":
+        first_day_this_month = reference_date.replace(day=1)
+        end_date = first_day_this_month - timedelta(days=1)
+        start_date = end_date.replace(day=1)
+        return start_date, end_date
+
+    return None
+
+reference = date(2026, 9, 18)
+assert get_period_date_range("this_month", reference,) == (
+    date(2026, 9, 1),
+    date(2026, 9, 30),
+)
+
+assert get_period_date_range("last_month", reference,) == (
+    date(2026, 8, 1),
+    date(2026, 8, 31),
+)
+
+
 def normalize_transaction(
     amount: Optional[str] = None,
     category: Optional[str] = None,
@@ -214,10 +202,7 @@ def normalize_transaction(
     period: Optional[str] = None,
     reference_date: Optional[date] = None,
 ) -> dict:
-    """
-    Convert NLU/NER entity output into normalized transaction data.
-    Financial values are normalized deterministically.
-    """
+    
     return {
         "amount": normalize_amount(amount),
         "category": category,
@@ -231,21 +216,7 @@ def normalize_transaction(
         "period": normalize_period(period),
     }
 
-def normalize_ner_entities(
-    entities: list,
-    description: Optional[str] = None,
-    reference_date: Optional[date] = None,
-) -> dict:
-    """
-    Convert raw NER entities into normalized financial fields.
-    NER entity format:
-        {
-            "type": "AMOUNT",
-            "text": "650k",
-            "start": 18,
-            "end": 22
-        }
-    """
+def normalize_ner_entities(entities: list, description: Optional[str] = None, reference_date: Optional[date] = None,) -> dict:
     normalized = {
         "amount": None,
         "category": None,
@@ -324,10 +295,7 @@ if __name__ == "__main__":
         "18-09-2026": "2026-09-18",
     }
     for text, expected in date_tests.items():
-        result = normalize_date(
-            text,
-            reference_date=reference
-        )
+        result = normalize_date(text, reference_date=reference)
         assert result == expected, (
             f"Date failed: {text} "
             f"-> {result}, expected {expected}"
@@ -418,3 +386,9 @@ if __name__ == "__main__":
         f"Expected: {expected_ner}"
     )
     print("NER normalization: PASS")
+
+def format_vnd(amount: float | int | None) -> str:
+    if amount is None:
+        return ""
+    value = int(round(float(amount)))
+    return f"{value:,}".replace(",", ".") + " đồng"
